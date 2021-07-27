@@ -1,4 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<addon id="repository.offspring"
+       name="[COLOR yellow]Offspring Repo[/COLOR]"
+       version="21.5.30"
+       provider-name="[COLOR yellow]Offspring[/COLOR]">
+    <extension point="xbmc.addon.repository" name="Offspring Repo">
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/m3atp1zza/OffSpringRepo/main/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/m3atp1zza/OffSpringRepo/main/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/m3atp1zza/OffSrpingRepo/main/zips/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>[COLOR yellow]Offspring Repo[/COLOR]</summary>
+        <description>[COLOR yellow]Offspring Repo[/COLOR]</description>
+        <platform>all</platform>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+    </extension>
+</addon>
+
 <addons>
 <addon id="repository.loonaticsasylum"
        name="  [COLORspringgreen]L[COLORpalegreen]o[COLORlime]o[COLORred]N[COLORcrimson]a[COLORmediumpurple]t[COLORmediumorchid]i[COLORorangered]c[COLORorange]s [COLORdeepskyblue]Asylum[/COLOR] [COLORblue]Repo[/COLOR]"
@@ -363,28 +386,6 @@
       <fanart>fanart.jpg</fanart>
     </assets> 
   </extension>
-</addon>
-
-<addon id="repository.sublime"
-       name="[COLORlime]sublime repo[/COLOR]"
-       version="21.5.30"
-       provider-name="[COLORlime]SubLime[/COLOR]">
-    <extension point="xbmc.addon.repository" name="Sublime Repo">
-        <dir>
-            <info compressed="false">https://raw.githubusercontent.com/sub1im3/sublime/main/zips/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/sub1im3/sublime/main/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/sub1im3/sublime/main/zips/</datadir>
-        </dir>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary>[COLORlime]Sublime Repo[/COLOR]</summary>
-        <description>[COLORlime]Sublime Repo[/COLOR]</description>
-        <platform>all</platform>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-    </extension>
 </addon>
 
     <addon id="repository.universalscrapers" name="universalscrapers-repository" version="1.0.0" provider-name="universalscrapers">
