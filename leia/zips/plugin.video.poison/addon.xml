@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.poison" version="21.7.26" name="[COLOR yellowgreen]Poison[/COLOR]" provider-name="[COLOR yellow]OffSpring[/COLOR]">
+<addon id="plugin.video.poison" version="21.7.27" name="[COLOR yellowgreen]Poison[/COLOR]" provider-name="[COLOR yellow]OffSpring[/COLOR]">
     <requires>
         <import addon="xbmc.python" version="2.19.0" />
         <import addon="script.module.resolveurl" />
