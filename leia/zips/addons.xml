@@ -282,4 +282,30 @@ provider-name="jurialmunkey">
   </extension>
 </addon>
 
+<addon id="script.focus.artwork" version="21.8.4" name="[B][COLOR purple]FOCUS ARTWORK[/COLOR][/B]" provider-name="[B][COLOR yellow]OffSpring[/COLOR][/B]">
+  <requires>
+    <import addon="xbmc.python" version="2.19.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary>Theme for Focus Addon</summary>
+    <description>Artwork Module For Focus Addon</description>
+        <disclaimer lang="en"></disclaimer>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="script.module.focus" name="[COLOR purple]FOCUS MODULE[/COLOR]" version="1.1" provider-name="[COLOR yellow]OffSpring[/COLOR]">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">FOCUS</summary>
+    <description></description>
+        <disclaimer lang="en"></disclaimer>
+  </extension>
+</addon>
+
 </addons>
