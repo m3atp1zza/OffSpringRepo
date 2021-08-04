@@ -67,30 +67,42 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.poison" version="21.8.3" name="[COLOR yellowgreen]Poison[/COLOR]" provider-name="[COLOR yellow]OffSpring[/COLOR]">
+<addon  id="plugin.video.poison"
+        name="[COLOR springgreen]Poison[/COLOR]"
+        provider-name="[COLOR yellowgreen]OffSpring[/COLOR]"
+        version="21.8.5">
     <requires>
-        <import addon="xbmc.python" version="2.19.0" />
         <import addon="script.module.resolveurl" />
         <import addon="script.module.requests" />
-        <import addon="script.module.openscrapers" />
-        <import addon="script.module.metahandler" version="1.0.0" />
+        <import addon="script.module.beautifulsoup4" />
+        <import addon="script.module.encrypticscrapers" />
+        <import addon="script.module.orion" optional="true" />
+        <import addon="script.module.six" />
+        <import addon="script.module.simplejson" />
+        <import addon="script.module.metahandler" optional="true" />
+        <import addon="plugin.video.youtube" optional="true" />
     </requires>
-    <extension point="xbmc.python.pluginsource" library="poison.py">
+    <extension library="poison.py" point="xbmc.python.pluginsource">
         <provides>video</provides>
     </extension>
-    <extension point="xbmc.service" library="service.py" start="startup" />
+    <extension library="service.py" point="xbmc.service" start="startup" />
     <extension point="xbmc.addon.metadata">
-        <summary lang="en">[COLOR yellowgreen]Poison[/COLOR]</summary>
-        <description lang="en">This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.The author does not host any of the content in this addon and takes no responsibility for content found.</description>
-        <disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+        <summary lang="en_GB">Poison</summary>
+        <description lang="en_GB">Multi-source add-on with native Orion integration.[CR][CR]The author does not host any of the content in this add-on and takes no responsibility for content found.</description>
         <platform>all</platform>
-        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <license></license>
+        <forum />
+        <website></website>
+        <source />
+        <disclaimer lang="en_GB">The author of this add-on does not host any of the content which is found and has no affiliation with any of the content providers. This add-on simply searches websites for content. Use at your own risk!</disclaimer>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
-                <screenshot></screenshot>
         </assets>
-        <news></news>
+        <news>
+- See Changelog on Tools menu
+        </news>
     </extension>
 </addon>
 
