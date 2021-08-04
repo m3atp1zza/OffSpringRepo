@@ -250,7 +250,7 @@ provider-name="jurialmunkey">
     </extension>
 </addon>
 
-<addon id="plugin.video.focus" version="21.8.4" name="[COLOR purple]FOCUS[/COLOR]" provider-name="[B][COLOR yellow]OffSpring[/COLOR][/B]">
+<addon id="plugin.video.focus" version="21.8.4a" name="[COLOR purple]FOCUS[/COLOR]" provider-name="[B][COLOR yellow]OffSpring[/COLOR][/B]">
   <requires>
     <import addon="xbmc.python" version="2.25.0" />
     <import addon="script.module.focus" />
@@ -267,7 +267,7 @@ provider-name="jurialmunkey">
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">[COLOR mediumpurple]Movies and TV Shows. TMDb, IMDB, and TRAKT[/COLOR]</summary>
-    <description>[COLOR mediumpurple]Focus Movies and TV. This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels. The Dev does not host any of the content in this addon and takes no responsibility for content found[/COLOR]</description>
+    <description>[COLOR mediumpurple]Movies and TV Shows. TMDb, IMDB, and TRAKT... This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels. The Dev does not host any of the content in this addon and takes no responsibility for content found[/COLOR]</description>
         <disclaimer lang="en">The Dev of this addon does not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!
 </disclaimer>
     <platform>all</platform>
