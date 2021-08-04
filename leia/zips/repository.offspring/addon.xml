@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="repository.offspring"
-       name="[COLORyellowgreen]offspring repo[/COLOR]"
-       version="21.7.29"
-       provider-name="[COLORyellowgreen]OffSpring[/COLOR]">
+       name="[COLORyellow]offspring repo[/COLOR]"
+       version="21.8.4"
+       provider-name="[COLORyellow]OffSpring[/COLOR]">
     <extension point="xbmc.addon.repository" name="OffSpring Repo">
         <dir minversion="18.0" maxversion="18.9.0"><!--OffSpringRepo LEIA-->
             <info compressed="false">https://raw.githubusercontent.com/m3atp1zza/OffSpringRepo/main/leia/zips/addons.xml</info>
