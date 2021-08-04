@@ -2,12 +2,12 @@
 <addon  id="plugin.video.poison"
         name="[COLOR springgreen]Poison[/COLOR]"
         provider-name="[COLOR yellowgreen]OffSpring[/COLOR]"
-        version="21.8.5">
+        version="21.8.3a">
     <requires>
         <import addon="script.module.resolveurl" />
         <import addon="script.module.requests" />
         <import addon="script.module.beautifulsoup4" />
-        <import addon="script.module.encrypticscrapers" />
+        <import addon="script.module.openscrapers" />
         <import addon="script.module.orion" optional="true" />
         <import addon="script.module.six" />
         <import addon="script.module.simplejson" />
@@ -21,7 +21,7 @@
     <extension point="xbmc.addon.metadata">
         <reuselanguageinvoker>false</reuselanguageinvoker>
         <summary lang="en_GB">Poison</summary>
-        <description lang="en_GB">Multi-source add-on with native Orion integration.[CR][CR]The author does not host any of the content in this add-on and takes no responsibility for content found.</description>
+        <description lang="en_GB">[COLORyellowgreen]Multi-source addon with TMDb, IMDb, and Trakt...[/COLOR][CR][CR]The author does not host any of the content in this add-on and takes no responsibility for content found.</description>
         <platform>all</platform>
         <license></license>
         <forum />
