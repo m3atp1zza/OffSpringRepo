@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.focus.metadata" version="1.0.6" name="[B][COLOR purple]FOCUS METADATA[/COLOR][/B]" provider-name="[B][COLOR purple]BBB[/COLOR][/B]">
+<addon id="script.focus.metadata" version="21.8.5" name="[COLOR purple]FOCUS METADATA[/COLOR]" provider-name="[COLOR yellow]OffSpring[/COLOR]">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0"/>
 	</requires>

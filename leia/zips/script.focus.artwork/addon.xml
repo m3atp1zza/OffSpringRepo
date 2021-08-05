@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.focus.artwork" version="21.8.4" name="[B][COLOR purple]FOCUS ARTWORK[/COLOR][/B]" provider-name="[B][COLOR yellow]OffSpring[/COLOR][/B]">
+<addon id="script.focus.artwork" version="21.8.5" name="[COLOR purple]FOCUS ARTWORK[/COLOR]" provider-name="[COLOR yellow]OffSpring[/COLOR]">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0"/>
 	</requires>

@@ -282,7 +282,7 @@ provider-name="jurialmunkey">
   </extension>
 </addon>
 
-<addon id="script.focus.artwork" version="21.8.4" name="[B][COLOR purple]FOCUS ARTWORK[/COLOR][/B]" provider-name="[B][COLOR yellow]OffSpring[/COLOR][/B]">
+<addon id="script.focus.artwork" version="21.8.5" name="[COLOR purple]FOCUS ARTWORK[/COLOR]" provider-name="[COLOR yellow]OffSpring[/COLOR]">
   <requires>
     <import addon="xbmc.python" version="2.19.0"/>
   </requires>
@@ -295,7 +295,19 @@ provider-name="jurialmunkey">
   </extension>
 </addon>
 
-<addon id="script.module.focus" name="[COLOR purple]FOCUS MODULE[/COLOR]" version="1.1" provider-name="[COLOR yellow]OffSpring[/COLOR]">
+<addon id="script.focus.metadata" version="21.8.5" name="[COLOR purple]FOCUS METADATA[/COLOR]" provider-name="[COLOR yellow]OffSpring[/COLOR]">
+  <requires>
+    <import addon="xbmc.python" version="2.19.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary></summary>
+    <description></description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="script.module.focus" name="[COLOR purple]FOCUS MODULE[/COLOR]" version="21.8.5" provider-name="[COLOR yellow]OffSpring[/COLOR]">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
   </requires>
