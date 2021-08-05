@@ -2,7 +2,7 @@
 <addons>
 <addon id="repository.offspring"
        name="[COLORyellowgreen]offspring repo[/COLOR]"
-       version="21.8.4"
+       version="21.8.5"
        provider-name="[COLORyellowgreen]OffSpring[/COLOR]">
     <extension point="xbmc.addon.repository" name="OffSpring Repo">
         <dir minversion="18.0" maxversion="18.9.0"><!--OffSpringRepo LEIA-->
