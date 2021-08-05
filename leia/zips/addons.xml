@@ -70,7 +70,7 @@
 <addon  id="plugin.video.poison"
         name="[COLOR yellowgreen]Poison[/COLOR]"
         provider-name="[COLOR yellowgreen]OffSpring[/COLOR]"
-        version="21.8.4a">
+        version="21.8.5">
     <requires>
         <import addon="script.module.resolveurl" />
         <import addon="script.module.requests" />
