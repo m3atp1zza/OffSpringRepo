@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <?xml-stylesheet href="hide-it.xsl" type="text/xsl"?>
 <layoutype>POISON</layoutype>
+
+<item>
+    <title>[COLORdarkorange][/COLOR] (2021)</title>
+    <link></link>
+    <thumbnail></thumbnail>
+    <fanart></fanart>
+</item>
+
+<item>
+    <title>[COLORdarkorange]The Suicide Squad[/COLOR] (2021)</title>
+    <link>magnet:?xt=urn:btih:feb8b5e7cd446e1b65ce33365eceab17d3441fdc</link>
+    <thumbnail>https://www.themoviedb.org/t/p/w220_and_h330_face/bSsIvk7TCUpzZwZQWrR7oxglvA5.jpg</thumbnail>
+    <fanart>https://www.themoviedb.org/t/p/w500_and_h282_face/jlGmlFOcfo8n5tURmhC7YVd4Iyy.jpg</fanart>
+</item>
   
 <item>
     <title>[COLORcrimson]A Dark Foe[/COLOR] (2021)</title>
