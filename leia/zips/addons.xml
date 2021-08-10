@@ -68,14 +68,14 @@
 </addon>
 
 <addon  id="plugin.video.poison"
-        name="[COLOR yellowgreen]Poison[/COLOR]"
-        provider-name="[COLOR yellowgreen]OffSpring[/COLOR]"
-        version="21.8.5">
+        name="[COLOR springgreen]Poison[/COLOR]"
+        provider-name="[COLOR yellow]OffSpring[/COLOR]"
+        version="21.8.8">
     <requires>
         <import addon="script.module.resolveurl" />
         <import addon="script.module.requests" />
         <import addon="script.module.beautifulsoup4" />
-        <import addon="script.module.encrypticscrapers" />
+        <import addon="script.module.poisonscrapers" />
         <import addon="script.module.orion" optional="true" />
         <import addon="script.module.six" />
         <import addon="script.module.simplejson" />
@@ -89,7 +89,7 @@
     <extension point="xbmc.addon.metadata">
         <reuselanguageinvoker>false</reuselanguageinvoker>
         <summary lang="en_GB">Poison</summary>
-        <description lang="en_GB">[COLOR yellowgreen]Multi-source add-on with TMDb, IMDB, and Trakt...[/COLOR][CR][CR]The author does not host any of the content in this add-on and takes no responsibility for content found.</description>
+        <description lang="en_GB">Multi-source add-on with native Orion integration.[CR][CR]The author does not host any of the content in this add-on and takes no responsibility for content found.</description>
         <platform>all</platform>
         <license></license>
         <forum />
@@ -210,7 +210,6 @@ provider-name="jurialmunkey">
         <provides>video</provides>
     </extension>
     
-
     <extension point="xbmc.addon.metadata">
         <summary>f4mTester</summary>
         <description></description>
