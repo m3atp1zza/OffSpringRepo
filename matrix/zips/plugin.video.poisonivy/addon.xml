@@ -1,0 +1,34 @@
+<addon id="plugin.video.poisonivy" name="[COLOR lawngreen]Poison Ivy[/COLOR]" provider-name="[COLOR yellow]OffSpring[/COLOR]" version="21.9.6b">
+    <requires>
+        <import addon="context.poisonivy" />
+        <import addon="script.module.myaccounts" />
+        <import addon="script.module.fenomscrapers" />
+        <import addon="script.module.requests" />
+        <import addon="script.module.beautifulsoup4" />
+        <import addon="script.module.six" />
+        <import addon="script.module.kodi-six" />
+        <import addon="script.module.resolveurl" />
+        <import addon="script.module.metahandler" optional="true" />
+        <import addon="plugin.video.youtube" optional="true" />
+        <import addon="script.module.addon.signals" optional="true" />
+    </requires>
+    <extension library="poisonivy.py" point="xbmc.python.pluginsource">
+        <provides>video</provides>
+    </extension>
+    <extension library="service.py" point="xbmc.service" start="startup" />
+    <extension library="resources/lib/" point="xbmc.python.module" />
+    <extension point="xbmc.addon.metadata">
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+        <summary lang="en">[COLOR lawngreen]Poison Ivy[/COLOR]</summary>
+        <description lang="en"> [COLOR lawngreen]Poison Ivy[/COLOR]</description>
+        <platform>all</platform>
+        <license></license>
+        <forum />
+        <disclaimer lang="en">[COLOR lawngreen]Poison Ivy[/COLOR]</disclaimer>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+        <news></news>
+    </extension>
+</addon>
