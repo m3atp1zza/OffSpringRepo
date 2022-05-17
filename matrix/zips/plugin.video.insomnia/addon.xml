@@ -1,0 +1,34 @@
+<addon id="plugin.video.insomnia" name="[COLOR orange]INSOMNIA[/COLOR]" provider-name="INSOMNIA" version="22.5.4">
+    <requires>
+        <import addon="context.insomnia" />
+        <import addon="script.module.youraccounts" />
+        <import addon="script.module.lescrapers" />
+        <import addon="script.module.requests" />
+        <import addon="script.module.beautifulsoup4" />
+        <import addon="script.module.six" />
+        <import addon="script.module.kodi-six" />
+        <import addon="script.module.resolveurl" />
+        <import addon="script.module.metahandler" optional="true" />
+        <import addon="plugin.video.youtube" optional="true" />
+        <import addon="script.module.addon.signals" optional="true" />
+    </requires>
+    <extension library="insomnia.py" point="xbmc.python.pluginsource">
+        <provides>video</provides>
+    </extension>
+    <extension library="service.py" point="xbmc.service" start="startup" />
+    <extension library="resources/lib/" point="xbmc.python.module" />
+    <extension point="xbmc.addon.metadata">
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+        <summary lang="en">[COLOR orange]INSOMNIA[/COLOR] - We do not host any of the contents streamed.</summary>
+        <description lang="en">[COLOR orange]INSOMNIA[/COLOR][CR] This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.[CR]The author does not host any of the content in this addon and takes no responsibility for content found.</description>
+		<disclaimer lang="en">The author of this addon does not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+        <platform>all</platform>
+        <license></license>
+        <forum />
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+        <news></news>
+    </extension>
+</addon>
