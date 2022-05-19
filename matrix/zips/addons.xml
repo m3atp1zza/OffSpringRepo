@@ -1,10 +1,273 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="repository.loonaticsasylum"
-       name="  [COLORspringgreen]L[COLORpalegreen]o[COLORlime]o[COLORred]N[COLORcrimson]a[COLORmediumpurple]t[COLORmediumorchid]i[COLORorangered]c[COLORorange]s [COLORdeepskyblue]Asylum[/COLOR] [COLORblue]Repo[/COLOR]"
-       version="21.7.14"
-       provider-name="[COLORgreen]• [COLORspringgreen]Tech [COLORpalegreen]E [COLORlime]Coyote [COLORgreen]•[/COLOR]">
-    <extension point="xbmc.addon.repository" name="Loonatics Asylum Repository">
+<addon id="plugin.program.super.favourites" name="Super Favourites" version="1.0.43" provider-name="spoyser">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.metahandler" optional="true" />
+  </requires>
+
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video audio executable image</provides>
+  </extension>
+
+  <extension point="xbmc.service" library="service.py" start="startup" />
+
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Put all your favourites bits of all your favourites addons into one easy to use addon.</summary>
+    <description lang="en">Super Favourites is a better way of managing your Kodi Favourites.[CR][CR]Virtually any menu item within Kodi can be added to Super Favourites, even from addons that don't normally provide this feature.[CR][CR]Super Favourites allows you to better manage your Kodi favourites, including the creation of sub-folders, into which your Kodi favourites can then be copied or moved into.[CR][CR]This allows you to create you own custom addon with just the best bits of your favourite addons. Search your favourite addons, play your favourite music, read your favourite comic strips, select your favourite playlists, browse your favourite movies, listen to your favourite radio stations, watch your favourite cartoons, the possibilities are endless, all from within one easy to use addon.</description>
+    <platform>all</platform>
+    <language>en</language>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum>http://forum.xbmc.org/showthread.php?tid=192662</forum>
+    <website></website>
+    <source>https://github.com/spoyser/spoyser-repo/tree/master/plugin.program.super.favourites</source>
+    <email>seanpoyser at gmail.com</email>
+  </extension>
+
+  <extension point="kodi.context.item" library="capture.py">
+      <item>
+        <label>30000</label>
+        <visible>true</visible>
+      </item>
+    </extension>
+</addon>
+
+<addon id="plugin.video.f4mTester" version="3.0.0" name="F4mTester" provider-name="Shani">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.video.F4mProxy" version="2.7.1"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+
+
+    <extension point="xbmc.addon.metadata">
+        <summary>f4mTester</summary>
+        <description></description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="plugin.video.insomnia" name="[COLOR orange]INSOMNIA[/COLOR]" provider-name="INSOMNIA" version="22.5.4">
+    <requires>
+        <import addon="context.insomnia" />
+        <import addon="script.module.youraccounts" />
+        <import addon="script.module.lescrapers" />
+        <import addon="script.module.requests" />
+        <import addon="script.module.beautifulsoup4" />
+        <import addon="script.module.six" />
+        <import addon="script.module.kodi-six" />
+        <import addon="script.module.resolveurl" />
+        <import addon="script.module.metahandler" optional="true" />
+        <import addon="plugin.video.youtube" optional="true" />
+        <import addon="script.module.addon.signals" optional="true" />
+    </requires>
+    <extension library="insomnia.py" point="xbmc.python.pluginsource">
+        <provides>video</provides>
+    </extension>
+    <extension library="service.py" point="xbmc.service" start="startup" />
+    <extension library="resources/lib/" point="xbmc.python.module" />
+    <extension point="xbmc.addon.metadata">
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+        <summary lang="en">[COLOR orange]INSOMNIA[/COLOR] - We do not host any of the contents streamed.</summary>
+        <description lang="en">[COLOR orange]INSOMNIA[/COLOR][CR] This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.[CR]The author does not host any of the content in this addon and takes no responsibility for content found.</description>
+		<disclaimer lang="en">The author of this addon does not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+        <platform>all</platform>
+        <license></license>
+        <forum />
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+        <news></news>
+    </extension>
+</addon>
+
+<addon  id="plugin.video.poison"
+        name="[COLOR springgreen]Poison[/COLOR]"
+        provider-name="[COLOR yellowgreen]OffSpring[/COLOR]"
+        version="21.8.8">
+    <requires>
+        <import addon="script.module.resolveurl" />
+        <import addon="script.module.requests" />
+        <import addon="script.module.beautifulsoup4" />
+        <import addon="script.module.poisonscrapers" />
+        <import addon="script.module.orion" optional="true" />
+        <import addon="script.module.six" />
+        <import addon="script.module.simplejson" />
+        <import addon="script.module.metahandler" optional="true" />
+        <import addon="plugin.video.youtube" optional="true" />
+    </requires>
+    <extension library="poison.py" point="xbmc.python.pluginsource">
+        <provides>video</provides>
+    </extension>
+    <extension library="service.py" point="xbmc.service" start="startup" />
+    <extension point="xbmc.addon.metadata">
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+        <summary lang="en_GB">Poison</summary>
+        <description lang="en_GB">Multi-source add-on with native Orion integration.[CR][CR]The author does not host any of the content in this add-on and takes no responsibility for content found.</description>
+        <platform>all</platform>
+        <license></license>
+        <forum />
+        <website></website>
+        <source />
+        <disclaimer lang="en_GB">The author of this add-on does not host any of the content which is found and has no affiliation with any of the content providers. This add-on simply searches websites for content. Use at your own risk!</disclaimer>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+        <news>
+- See Changelog on Tools menu
+        </news>
+    </extension>
+</addon>
+
+<addon id="plugin.video.poisonivy" name="[COLOR lawngreen]Poison Ivy[/COLOR]" provider-name="[COLOR yellow]OffSpring[/COLOR]" version="21.9.6b">
+    <requires>
+        <import addon="context.poisonivy" />
+        <import addon="script.module.myaccounts" />
+        <import addon="script.module.fenomscrapers" />
+        <import addon="script.module.requests" />
+        <import addon="script.module.beautifulsoup4" />
+        <import addon="script.module.six" />
+        <import addon="script.module.kodi-six" />
+        <import addon="script.module.resolveurl" />
+        <import addon="script.module.metahandler" optional="true" />
+        <import addon="plugin.video.youtube" optional="true" />
+        <import addon="script.module.addon.signals" optional="true" />
+    </requires>
+    <extension library="poisonivy.py" point="xbmc.python.pluginsource">
+        <provides>video</provides>
+    </extension>
+    <extension library="service.py" point="xbmc.service" start="startup" />
+    <extension library="resources/lib/" point="xbmc.python.module" />
+    <extension point="xbmc.addon.metadata">
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+        <summary lang="en">[COLOR lawngreen]Poison Ivy[/COLOR]</summary>
+        <description lang="en"> [COLOR lawngreen]Poison Ivy[/COLOR]</description>
+        <platform>all</platform>
+        <license></license>
+        <forum />
+        <disclaimer lang="en">[COLOR lawngreen]Poison Ivy[/COLOR]</disclaimer>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+        <news></news>
+    </extension>
+</addon>
+
+<addon
+  id="plugin.video.SportsDevil"
+  version="2019.12.29"
+  name="SportsDevil"
+  provider-name="SportsDevil">
+  <requires>
+   <import addon="xbmc.python" version="2.14.0"/>
+   <import addon="script.module.dateutil" />
+   <import addon="script.module.simplejson" />
+   <import addon="script.module.six" />
+   <import addon="script.module.requests" />
+   <import addon="plugin.video.f4mTester" />
+   <import addon="script.module.slproxy" />
+  </requires>
+  <extension
+    point="xbmc.python.pluginsource"
+    library="default.py">
+   <provides>video</provides>
+  </extension>
+  <!-- <extension point="xbmc.service" library="service/streamlink_proxy.py" /> -->
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">SportsDevil</summary>
+    <description lang="en">[I]There can only be one.[/I][CR][CR]Unofficial Kodi Addon.</description>
+    <disclaimer lang="en">There can only be one.</disclaimer>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.themoviedb.helper"
+version="4.2.20"
+name="TheMovieDb Helper"
+provider-name="jurialmunkey">
+<requires>
+  <import addon="xbmc.python" version="2.26.0"/>
+  <import addon="script.module.requests" version="2.9.1"/>
+  <import addon="script.module.pil" version="1.1.7"/>
+</requires>
+<extension point="xbmc.python.pluginsource" library="plugin.py">
+  <provides>video</provides>
+</extension>
+<extension point="xbmc.python.script" library="script.py" />
+<extension point="xbmc.service" library="service.py" />
+<extension point="kodi.context.item">
+  <menu id="kodi.core.main">
+    <item library="context-playusing.py">
+      <label>$ADDON[plugin.video.themoviedb.helper 32322]</label>
+      <visible>!String.IsEmpty(ListItem.Property(tmdbhelper.context.playusing))</visible>
+    </item>
+    <item library="context-related.py">
+      <label>$ADDON[plugin.video.themoviedb.helper 32235]</label>
+      <visible>!String.IsEmpty(ListItem.Property(tmdbhelper.context.related))</visible>
+    </item>
+    <item library="context-addlibrary.py">
+      <label>$LOCALIZE[20444]</label>
+      <visible>!String.IsEmpty(ListItem.Property(tmdbhelper.context.addlibrary))</visible>
+    </item>
+    <item library="context-trakt.py">
+      <label>$ADDON[plugin.video.themoviedb.helper 32295]</label>
+      <visible>!String.IsEmpty(ListItem.Property(tmdbhelper.context.trakt))</visible>
+    </item>
+    <item library="context-refresh.py">
+      <label>$ADDON[plugin.video.themoviedb.helper 32233]</label>
+      <visible>!String.IsEmpty(ListItem.Property(tmdbhelper.context.refresh))</visible>
+    </item>
+    <item library="context-artwork.py">
+      <label>$ADDON[plugin.video.themoviedb.helper 32222]</label>
+      <visible>!String.IsEmpty(ListItem.Property(tmdbhelper.context.artwork))</visible>
+    </item>
+    <item library="context-sorting.py">
+      <label>$ADDON[plugin.video.themoviedb.helper 32309]</label>
+      <visible>!String.IsEmpty(ListItem.Property(tmdbhelper.context.sorting))</visible>
+    </item>
+  </menu>
+</extension>
+<extension point="xbmc.addon.metadata">
+  <summary lang="en_GB">TheMovieDb Helper - Now With Trakt Support!</summary>
+  <summary lang="es_ES">TheMovieDb Helper - ¡Ahora con soporte para Trakt!</summary>
+  <description lang="en_GB">TheMovieDb Helper provides details about movies, tvshows and actors from TMDb. Users can access a variety of lists from TMDb and Trakt.</description>
+  <description lang="es_ES">TheMovieDb Helper proporciona detalles sobre películas, programas de televisión y actores de TMDb. Los usuarios pueden acceder a una variedad de listas desde TMDb y Trakt.</description>
+  <disclaimer lang="en_GB">Provided by TheMovieDb and Trakt.</disclaimer>
+  <disclaimer lang="es_ES">Proporcionado por TheMovieDb y Trakt</disclaimer>
+  <license>GPL-3.0-or-later</license>
+  <website>https://github.com/jurialmunkey/plugin.video.themoviedb.helper</website>
+  <forum>https://forum.kodi.tv/showthread.php?tid=345847</forum>
+  <assets>
+    <icon>icon.png</icon>
+    <fanart>fanart.jpg</fanart>
+    <screenshot>resources/screenshot-01.jpg</screenshot>
+    <screenshot>resources/screenshot-02.jpg</screenshot>
+  </assets>
+  <news>Add some additional dbid checking based on title/year combo</news>
+</extension>
+</addon>
+
+<addon id="repository.offspring"
+       name="[COLORyellow]offspring repo[/COLOR]"
+       version="21.8.4"
+       provider-name="[COLORyellow]OffSpring[/COLOR]">
+    <extension point="xbmc.addon.repository" name="OffSpring Repo">
+        <dir minversion="18.0" maxversion="18.9.0"><!--OffSpringRepo LEIA-->
+            <info compressed="false">https://raw.githubusercontent.com/m3atp1zza/OffSpringRepo/main/leia/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/m3atp1zza/OffSpringRepo/main/leia/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/m3atp1zza/OffSpringRepo/main/leia/zips/</datadir>
+        </dir>
+        <dir minversion="18.9.0"><!--OffSpringRepo Matrix-->
+            <info compressed="false">https://raw.githubusercontent.com/m3atp1zza/OffSpringRepo/main/matrix/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/m3atp1zza/OffSpringRepo/main/matrix/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/m3atp1zza/OffSpringRepo/main/matrix/zips/</datadir>
+        </dir>
         <dir minversion="18.0" maxversion="18.9.0"><!--LoonaticsAsylum LEIA-->
             <info compressed="false">https://raw.githubusercontent.com/techecoyote/LooNaticsAsylum/master/leia/zips/addons.xml</info>
             <checksum>https://raw.githubusercontent.com/techecoyote/LooNaticsAsylum/master/leia/zips/addons.xml.md5</checksum>
@@ -15,30 +278,10 @@
             <checksum>https://raw.githubusercontent.com/techecoyote/LooNaticsAsylum/master/matrix/zips/addons.xml.md5</checksum>
             <datadir zip="true">https://raw.githubusercontent.com/techecoyote/LooNaticsAsylum/master/matrix/zips/</datadir>
         </dir>
-        <dir><!--MyAccounts-->
-            <info compressed="false">https://raw.githubusercontent.com/mr-kodi/repository.myaccounts/master/zips/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/mr-kodi/repository.myaccounts/master/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/mr-kodi/repository.myaccounts/master/zips/</datadir>
-        </dir>
-        <dir><!--FenomScrapers-->
-            <info compressed="false">https://raw.githubusercontent.com/mr-kodi/repository.fenomscrapers/master/zips/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/mr-kodi/repository.fenomscrapers/master/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/mr-kodi/repository.fenomscrapers/master/zips/</datadir>
-        </dir>
-        <dir><!--SlyGuyTV-->
-            <info compressed="false">https://k.slyguy.xyz/.repo/addons.xml</info>
-            <checksum>https://k.slyguy.xyz/.repo/addons.xml.md5</checksum>
-            <datadir zip="true">https://k.slyguy.xyz/.repo/</datadir>
-        </dir>
         <dir><!--OpenScrapers-->
             <info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml</info>
             <checksum>https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml.md5</checksum>
             <datadir zip="true">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/</datadir>
-        </dir>
-        <dir minversion="18.0" maxversion="18.9.0"><!--UniversalScrapers LEIA-->
-            <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
         </dir>
         <dir><!--ResolveUrl-->
             <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
@@ -67,1974 +310,13 @@
         </dir>
     </extension>
     <extension point="xbmc.addon.metadata">
-        <summary>[COLORspringgreen]L[COLORpalegreen]o[COLORlime]o[COLORred]N[COLORcrimson]a[COLORmediumpurple]t[COLORmediumorchid]i[COLORorangered]c[COLORorange]s [COLORdeepskyblue]Asylum[/COLOR] [COLORblue]Repo[/COLOR]</summary>
-        <description>[COLORspringgreen]L[COLORpalegreen]o[COLORlime]o[COLORred]N[COLORcrimson]a[COLORmediumpurple]t[COLORmediumorchid]i[COLORorangered]c[COLORorange]s [COLORdeepskyblue]Asylum[/COLOR] [COLORblue]Repo[/COLOR]</description>
+        <summary>[COLORyellowgreen]OffSpring Repo[/COLOR]</summary>
+        <description>[COLORyellowgreen]OffSpring Repo[/COLOR]</description>
         <platform>all</platform>
     <assets>
         <icon>icon.png</icon>
         <fanart>fanart.jpg</fanart>
     </assets>
     </extension>
-</addon>
-
-    <addon id="repository.420clubhousev2" name="420 Clubhouse Repo" version="2.3" provider-name="Team2wacked">
-        <requires>
-            <import addon="xbmc.addon" version="12.0.0"/>
-        </requires>
-        <extension point="xbmc.addon.repository" name="420 Clubhouse Repo">
-            <info compressed="false">http://team2wacked.xyz/_Clubhouse/addons.xml</info>
-            <checksum>http://team2wacked.xyz/_Clubhouse/addons.xml.md5</checksum>
-            <datadir zip="true">http://team2wacked.xyz/_Clubhouse/</datadir>
-            <hashes>false</hashes>
-        </extension>
-        <extension point="xbmc.addon.metadata">
-            <summary>Repo for the 420 CLUBHOUSE addon</summary>
-            <description>Repo for the 420 CLUBHOUSE addon</description>
-            <platform>all</platform>
-    </extension>
-</addon>
-
-<addon id="repository.encryptic" name="EnCryptic Repository" provider-name="Boogeyman" version="1.0.10">
-  <extension point="xbmc.addon.repository" name="EnCryptic Repository">
-    <dir>
-      <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
-      <checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
-      <datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
-    </dir>
-	<dir>
-      <info compressed="false">http://cf368ff.online-server.cloud/encryptic/zips/addons.xml</info>
-      <checksum>http://cf368ff.online-server.cloud/encryptic/zips/addons.xml.md5</checksum>
-      <datadir zip="true">http://cf368ff.online-server.cloud/encryptic/zips/</datadir>
-	</dir>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-    <description lang="en_GB">EnCryptic</description>
-    <license></license>
-    <language></language>
-    <website></website>
-    <news></news>
-    <assets>
-      <icon>icon.png</icon>
-      <fanart>fanart.jpg</fanart>
-    </assets> 
-  </extension>
-</addon>
-
-<addon id="repository.gujal" name="Gujal Addons Repository" version="2.0.0" provider-name="gujal">
-	<extension point="xbmc.addon.repository" name="Gujal Addons Repository">
-		<dir>
-	        <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
-	        <checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
-	        <datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
-		</dir>
-		<info compressed="false">https://raw.github.com/Gujal00/GujalKodiWork/master/addons.xml</info>
-		<checksum>https://raw.github.com/Gujal00/GujalKodiWork/master/addons.xml.md5</checksum>
-		<datadir zip="true">https://raw.github.com/Gujal00/GujalKodiWork/master/zips/</datadir>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary>Third party Addons for Kodi</summary>
-		<description>Gujal Addons Repository</description>
-		<platform>all</platform>
-	</extension>
-</addon>
-
-    <addon id="repository.jenrepo" name="Jen Repo" version="1.0.3" provider-name="Community">
-        <extension point="xbmc.addon.repository" name="Jen Addon Repo">
-            <info compressed="false">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/</datadir>
-		<dir>
-            <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
-        </dir>
-        <dir>
-            <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
-        </dir>
-        <dir>
-            <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
-        </dir>
-        <dir>
-            <info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
-        </dir>
-        </extension>
-        <extension point="xbmc.addon.metadata">
-            <summary>Official Repo For Jen Dependencies</summary>
-            <description>Jen Brings The Dawn Of A New Day in Kodi .. You Now Have The Power To Make Your Add-On</description>
-            <platform>all</platform>
-            <genre>movies,usa</genre>
-        </extension>
-    </addon>
-	
-<addon id="repository.jsergio" name="jsergio repo" version="1.0.4" provider-name="jsergio">
-	<extension point="xbmc.addon.repository" name="jsergio repo">
-        <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
-        <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
-        <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary>Repo for jsergio Add-ons</summary>
-		<description>Repo for jsergio Add-ons</description>
-		<platform>all</platform>
-	</extension>
-</addon>
-
-<addon id="repository.jurialmunkey" name="jurialmunkey Alpha Repository" version="2.2" provider-name="jurialmunkey">
-    <extension point="xbmc.addon.repository" name="jurialmunkey Alpha Repository">
-        <dir>
-            <info compressed="false">https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/repo/zips/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/repo/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/repo/zips/</datadir>
-        </dir>
-		<dir minversion="18.0" maxversion="18.9.0">
-            <info compressed="false">https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/leia/zips/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/leia/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/leia/zips/</datadir>
-        </dir>
-        <dir minversion="18.9.0">
-            <info compressed="false">https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/matrix/zips/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/matrix/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/matrix/zips/</datadir>
-        </dir>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary>jurialmunkey Alpha Repository</summary>
-        <description>A repository for alpha releases of jurialmunkey's skins.</description>
-        <disclaimer></disclaimer>
-        <platform>all</platform>
-        <assets>
-            <icon>icon.png</icon>
-        </assets>
-    </extension>
-</addon>
-
-<addon id="repository.Lumberjack" name="Lumberjack Repository" version="2.2" provider-name="Paul Bunyan">
-	<extension point="xbmc.addon.repository" name="Lumberjack Repository">
-		    <dir>
-				<info compressed="false">https://axeandsledge.xyz/repository/addons.xml</info>
-			    <checksum>https://axeandsledge.xyz/repository/addons.xml.md5</checksum>
-				<datadir zip="true">https://axeandsledge.xyz/repository/files/</datadir>
-			</dir>
-			<dir>
-				<info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
-				<checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
-				<datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
-			</dir>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary>Lumberjack Repository</summary>
-		<description>Lumberjack Repository</description>
-		<platform>all</platform>
-	</extension>
-</addon>
-
-<addon id="repository.openscrapers" name="OpenScrapers Repository" version="1.0" provider-name="A4K">
-	<extension point="xbmc.addon.repository" name="OpenScrapers Repository">
-		<dir>
-            <info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/</datadir>
-        </dir>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary>OpenScrapers Repository</summary>
-		<description>The official repo for OpenScrapers!.</description>
-		<disclaimer></disclaimer>
-		<platform>all</platform>
-	</extension>
-</addon>
-
-<addon id="repository.prototype" name="Prototype-Repo" version="1.0.14" provider-name="Cable">
-	<extension point="xbmc.addon.repository" name="Prototype-Repo">
-		<dir>
-			<info compressed="false">https://raw.githubusercontent.com/elijahcarasco/prototype/main/plugins/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/elijahcarasco/prototype/main/plugins/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/elijahcarasco/prototype/main/plugins</datadir>
-		</dir>
-		<dir>
-			<info compressed="false">http://cf368ff.online-server.cloud/symbo/par/zips/addons.xml</info>
-			<checksum>http://cf368ff.online-server.cloud/symbo/par/zips/addons.xml.md5</checksum>
-			<datadir zip="true">http://cf368ff.online-server.cloud/symbo/par/zips/</datadir>
-		</dir>
-		<dir>
-			<info compressed="false">http://cf368ff.online-server.cloud/symbo/scripts/zips/addons.xml</info>
-			<checksum>http://cf368ff.online-server.cloud/symbo/scripts/zips/addons.xml.md5</checksum>
-			<datadir zip="true">http://cf368ff.online-server.cloud/symbo/scripts/zips/</datadir>
-		</dir>
-        <dir>
-			<info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
-	    </dir>
-		<dir>
-	        <info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml</info>
-	        <checksum>https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml.md5</checksum>
-	        <datadir zip="true">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/</datadir>
-		</dir>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary></summary>
-		<description></description>
-		<disclaimer></disclaimer>
-		<website></website>
-		<forum></forum>
-		<platform>all</platform>
-		<license>GNU GENERAL PUBLIC LICENSE. Version 3, June 2007</license>
-	</extension>
-</addon>
-
-<addon id="repository.resolveurl" name="ResolveURL Repository" provider-name="gujal" version="1.0.0">
-  <extension point="xbmc.addon.repository" name="ResolveURL Repository">
-    <dir>
-      <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
-      <checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
-      <datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
-    </dir>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-    <description lang="en_GB">ResolveURL and Link Tester</description>
-    <license></license>
-    <language></language>
-    <website></website>
-    <news></news>
-    <assets>
-      <icon>icon.png</icon>
-      <fanart>fanart.jpg</fanart>
-    </assets> 
-  </extension>
-</addon>
-
-<addon id="repository.Rockcrusher" name="[COLOR red]Rocks Repository[/COLOR]" version="2.8" provider-name="Rock">
-	<extension point="xbmc.addon.repository" name="[COLOR red]Rocks Repository[/COLOR]">
-	<dir minversion="18.0" maxversion="18.9.0">
-        <info compressed="false">https://Rockodi.com/Kodi-18/addons.xml</info>
-        <checksum>https://Rockodi.com/Kodi-18/addons.xml.md5</checksum>
-        <datadir zip="true">https://Rockodi.com/Kodi-18/</datadir>
-    </dir>
-    <dir minversion="18.9.0">
-        <info compressed="false">https://Rockodi.com/Kodi-19/addons.xml</info>
-        <checksum>https://Rockodi.com/Kodi-19/addons.xml.md5</checksum>
-        <datadir zip="true">https://Rockodi.com/Kodi-19/</datadir>
-    </dir>
-    <dir>
-        <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
-        <checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
-        <datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
-    </dir>	
-        </extension>
-        <extension point="xbmc.addon.metadata">
-            <summary>Rocks Addons</summary>
-            <description>Rocks Repository</description>
-            <disclaimer lang="en">Author does not host or distribute any of the content displayed by this addon. Author does not have any affiliation with the content provider.
-            </disclaimer>
-            <platform>all</platform>
-            <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-        </assets>
-    </extension>
-</addon>
-
-<addon id="repository.slyguy" name="SlyGuy Repository" provider-name="SlyGuy" version="0.0.2">
-  <extension point="xbmc.addon.repository" name="SlyGuy Repository">
-    <dir>
-      <info compressed="false">https://k.slyguy.xyz/.repo/addons.xml</info>
-      <checksum>https://k.slyguy.xyz/.repo/addons.xml.md5</checksum>
-      <datadir zip="true">https://k.slyguy.xyz/.repo/</datadir>
-    </dir>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-    <description lang="en">Addons by SlyGuy</description>
-    <license></license>
-    <language></language>
-    <website></website>
-    <news></news>
-    <assets>
-      <icon>icon.png</icon>
-      <fanart>fanart.jpg</fanart>
-    </assets> 
-  </extension>
-</addon>
-
-<addon id="repository.sublime"
-       name="[COLORlime]sublime repo[/COLOR]"
-       version="21.5.30"
-       provider-name="[COLORlime]SubLime[/COLOR]">
-    <extension point="xbmc.addon.repository" name="Sublime Repo">
-        <dir>
-            <info compressed="false">https://raw.githubusercontent.com/sub1im3/sublime/main/zips/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/sub1im3/sublime/main/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/sub1im3/sublime/main/zips/</datadir>
-        </dir>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary>[COLORlime]Sublime Repo[/COLOR]</summary>
-        <description>[COLORlime]Sublime Repo[/COLOR]</description>
-        <platform>all</platform>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-    </extension>
-</addon>
-
-    <addon id="repository.universalscrapers" name="universalscrapers-repository" version="1.0.0" provider-name="universalscrapers">
-        <requires>
-            <import addon="xbmc.addon" version="12.0.0"/>
-        </requires>
-        <extension point="xbmc.addon.repository" name="universalscrapers">
-            <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
-            <hashes>false</hashes>
-        </extension>
-        <extension point="xbmc.addon.metadata">
-            <summary>Scrape common video host for URL's to be playable in XBMC/Kodi.</summary>
-            <description>carrying on the dream</description>
-            <platform>all</platform>
-        </extension>
-    </addon>
-
-<addon
-    id="context.le"
-    name="   [COLORdeepskyblue]Loonatics [COLORblue]Empire [/COLOR][COLORlightsteelblue]Context[/COLOR]"
-    provider-name="[COLORgreen]&#8226; [COLORspringgreen]Tech [COLORpalegreen]E [COLORlime]Coyote [COLORgreen]&#8226;[/COLOR]"
-    version="21.6.20">
-    <requires>
-        <import addon="script.module.requests" version="2.19.1" />
-    </requires>
-    <extension point="kodi.context.item">
-        <menu id="kodi.core.main">
-            <item library="contextSettings.py">
-                <label>[B][COLOR deepskyblue]LE[/COLOR][/B] - CM Settings</label>
-                <visible>
-                    !String.IsEmpty(Window(home).Property(context.le.settings)) +
-                    String.StartsWith(ListItem.path,plugin://plugin.video.le/) +
-                    String.IsEqual(ListItem.Property(isLE_widget),true)
-                </visible>
-            </item>
-            <item library="traktManager.py">
-                <label>[B][COLOR deepskyblue]LE[/COLOR][/B] - Trakt Manager</label>
-                <visible>
-                    !String.IsEmpty(Window(home).Property(context.le.traktManager)) +
-                    String.StartsWith(ListItem.path,plugin://plugin.video.le/) +
-                    String.IsEqual(ListItem.Property(isLE_widget),true) +
-                    [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,movie)]
-                </visible>
-            </item>
-            <item library="clearProviders.py">
-                <label>[B][COLOR deepskyblue]LE[/COLOR][/B] - Clear Providers</label>
-                <visible>
-                    [!String.IsEmpty(Window(home).Property(context.le.clearProviders)) +
-                    String.StartsWith(ListItem.FolderPath,plugin://plugin.video.le/?action=play) +
-                    String.IsEqual(ListItem.Property(isLE_widget),true) +
-                    [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]] |
-                    [String.Contains(Container.FolderPath,videodb://) +
-                    [String.Contains(Container.ListItem.Path,Window(home).Property(le.movieLib.path)) | String.Contains(Container.ListItem.Path,Window(home).Property(le.tvLib.path))] +
-                    [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]]
-                </visible>
-            </item>
-            <item library="clearBookmark.py">
-                <label>[B][COLOR deepskyblue]LE[/COLOR][/B] - Clear Item Bookmark</label>
-                <visible>
-                    !String.IsEmpty(Window(home).Property(context.le.clearBookmark)) +
-                    String.StartsWith(ListItem.FolderPath,plugin://plugin.video.le/?action=play) +
-                    String.IsEqual(ListItem.Property(isLE_widget),true) +
-                    ListItem.IsResumable +
-                    [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
-                </visible>
-            </item>
-            <item library="rescrape.py">
-                <label>[B][COLOR deepskyblue]LE[/COLOR][/B] - Rescrape Item</label>
-                <visible>
-                    [!String.IsEmpty(Window(home).Property(context.le.rescrape)) +
-                    String.StartsWith(ListItem.FolderPath,plugin://plugin.video.le/?action=play) +
-                    String.IsEqual(ListItem.Property(isLE_widget),true) +
-                    [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]]
-                </visible>
-            </item>
-            <item library="libRescrape.py">
-                <label>[B][COLOR deepskyblue]LE[/COLOR][/B] - Rescrape Lib Item</label>
-                <visible>
-                    String.Contains(Container.FolderPath,videodb://) +
-                    [String.Contains(Container.ListItem.Path,Window(home).Property(le.movieLib.path)) | String.Contains(Container.ListItem.Path,Window(home).Property(le.tvLib.path))] +
-                    [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
-                </visible>
-            </item>
-            <item library="playFromHere.py">
-                <label>[B][COLOR deepskyblue]LE[/COLOR][/B] - Play from here</label>
-                <visible>
-                    !String.IsEmpty(Window(home).Property(context.le.playFromHere)) +
-                    String.StartsWith(ListItem.path,plugin://plugin.video.le/) +
-                    String.IsEqual(ListItem.Property(isLE_widget),true) +
-                    String.IsEqual(ListItem.dbtype,episode)
-                </visible>
-            </item>
-            <item library="autoPlay.py">
-                <label>[B][COLOR deepskyblue]LE[/COLOR][/B] - Auto Play</label>
-                <visible>
-                    String.IsEmpty(Window(home).Property(le.autoPlay.enabled)) +
-                    !String.IsEmpty(Window(home).Property(context.le.autoPlay)) +
-                    String.StartsWith(ListItem.FolderPath,plugin://plugin.video.le/?action=play) +
-                    String.IsEqual(ListItem.Property(isLE_widget),true) +
-                    [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
-                </visible>
-            </item>
-            <item library="sourceSelect.py">
-                <label>[B][COLOR deepskyblue]LE[/COLOR][/B] - Source Select</label>
-                <visible>
-                    !String.IsEmpty(Window(home).Property(le.autoPlay.enabled)) +
-                    !String.IsEmpty(Window(home).Property(context.le.sourceSelect)) +
-                    String.StartsWith(ListItem.FolderPath,plugin://plugin.video.le/?action=play) +
-                    String.IsEqual(ListItem.Property(isLE_widget),true) +
-                    [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
-                </visible>
-            </item>
-            <item library="findSimilar.py">
-                <label>[B][COLOR deepskyblue]LE[/COLOR][/B] - Find Similar</label>
-                <visible>
-                    !String.IsEmpty(Window(home).Property(context.le.findSimilar)) +
-                    String.StartsWith(ListItem.path,plugin://plugin.video.le/) +
-                    String.IsEqual(ListItem.Property(isLE_widget),true) +
-                    [String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
-                </visible>
-            </item>
-            <item library="browseSeries.py">
-                <label>[B][COLOR deepskyblue]LE[/COLOR][/B] - Browse Series</label>
-                <visible>
-                    !String.IsEmpty(Window(home).Property(context.le.browseSeries)) +
-                    String.StartsWith(ListItem.path,plugin://plugin.video.le/) +
-                    String.IsEqual(ListItem.Property(isLE_widget),true) +
-                    [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow)]
-                </visible>
-            </item>
-            <item library="browseEpisodes.py">
-                <label>[B][COLOR deepskyblue]LE[/COLOR][/B] - Browse Episodes</label>
-                <visible>
-                    !String.IsEmpty(Window(home).Property(context.le.browseEpisodes)) +
-                    String.StartsWith(ListItem.path,plugin://plugin.video.le/) +
-                    String.IsEqual(ListItem.Property(isLE_widget),true) +
-                    String.IsEqual(ListItem.dbtype,episode)
-                </visible>
-            </item>
-        </menu>
-    </extension>
-    <extension point="xbmc.service" library="service.py" />
-    <extension point="xbmc.addon.metadata">
-        <summary lang="en">[COLORwhite]Loonatics Empire Context[/COLOR]</summary>
-        <description>[COLORwhite]Loonatics Empire Context[/COLOR]</description>
-        <platform>all</platform>
-        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-        <forum></forum>
-        <website></website>
-        <source></source>
-        <disclaimer lang="en"></disclaimer>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-            <screenshot></screenshot>
-        </assets>
-        <news></news>
-    </extension>
-</addon>
-
-<addon id="context.lu"
-version="20.9.11" name="   [COLORspringgreen]Loonatics [COLORpalegreen]Unleashed [COLORspringgreen]Context[/COLOR]"
-provider-name="[COLORspringgreen]• [COLORpalegreen]Loonatics [COLORspringgreen]•[/COLOR]">
-    <requires>
-        <import addon="xbmc.python" version="2.23.0" />
-    </requires>
-    <extension point="kodi.context.item">
-        <menu id="kodi.core.main">
-            <item library="contextSettings.py">
-                <label>[B][COLOR springgreen]LU[/COLOR][/B] - CM Settings</label>
-                <visible>
-                    !String.IsEmpty(Window(home).Property(context.lu.settings)) +
-                    String.StartsWith(ListItem.path,plugin://plugin.video.lu/) +
-                    String.IsEqual(ListItem.Property(isLU_widget),true)
-                </visible>
-            </item>
-            <item library="traktManager.py">
-                <label>[B][COLOR springgreen]LU[/COLOR][/B] - Trakt Manager</label>
-                <visible>
-                    !String.IsEmpty(Window(home).Property(context.lu.traktManager)) +
-                    String.StartsWith(ListItem.path,plugin://plugin.video.lu/) +
-                    String.IsEqual(ListItem.Property(isLU_widget),true) +
-                    [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,movie)]
-                </visible>
-            </item>
-            <item library="clearProviders.py">
-                <label>[B][COLOR springgreen]LU[/COLOR][/B] - Clear Providers</label>
-                <visible>
-                    !String.IsEmpty(Window(home).Property(context.lu.clearProviders)) +
-                    String.StartsWith(ListItem.FolderPath,plugin://plugin.video.lu/?action=play) +
-                    String.IsEqual(ListItem.Property(isLU_widget),true) +
-                    [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
-                </visible>
-            </item>
-            <item library="clearBookmark.py">
-                <label>[B][COLOR springgreen]LU[/COLOR][/B] - Clear Item Bookmark</label>
-                <visible>
-                    !String.IsEmpty(Window(home).Property(context.lu.clearBookmark)) +
-                    String.StartsWith(ListItem.FolderPath,plugin://plugin.video.lu/?action=play) +
-                    String.IsEqual(ListItem.Property(isLU_widget),true) +
-<!--                    !String.IsEqual(ListItem.Property(resumetime),0) + -->
-                    !String.IsEqual(ListItem.Property(lu_resumetime),0) +
-                    [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
-                </visible>
-            </item>
-            <item library="rescrape.py">
-                <label>[B][COLOR springgreen]LU[/COLOR][/B] - Rescrape Item</label>
-                <visible>
-                    !String.IsEmpty(Window(home).Property(context.lu.rescrape)) +
-                    String.StartsWith(ListItem.FolderPath,plugin://plugin.video.lu/?action=play) +
-                    String.IsEqual(ListItem.Property(isLU_widget),true) +
-                    [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
-
-<!-- Future for Library CM to Rescrape -->
-<!--                    !String.IsEmpty(Window(home).Property(context.lu.rescrape)) +
-                    [String.Contains(ListItem.Path,plugin.video.lu) + String.IsEqual(ListItem.FileExtension,strm) | String.StartsWith(ListItem.FolderPath,plugin://plugin.video.lu/?action=play)] +
-                    [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)] -->
-                </visible>
-            </item>
-            <item library="playFromHere.py">
-                <label>[B][COLOR springgreen]LU[/COLOR][/B] - Play from here</label>
-                <visible>
-                    !String.IsEmpty(Window(home).Property(context.lu.playFromHere)) +
-                    String.StartsWith(ListItem.path,plugin://plugin.video.lu/) +
-                    String.IsEqual(ListItem.Property(isLU_widget),true) +
-                    String.IsEqual(ListItem.dbtype,episode)
-                </visible>
-            </item>
-            <item library="autoPlay.py">
-                <label>[B][COLOR springgreen]LU[/COLOR][/B] - Auto Play</label>
-                <visible>
-                    String.IsEmpty(Window(home).Property(plugin.video.lu.autoPlay)) +
-                    !String.IsEmpty(Window(home).Property(context.lu.autoPlay)) +
-                    String.StartsWith(ListItem.FolderPath,plugin://plugin.video.lu/?action=play) +
-                    String.IsEqual(ListItem.Property(isLU_widget),true) +
-                    [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
-                </visible>
-            </item>
-            <item library="sourceSelect.py">
-                <label>[B][COLOR springgreen]LU[/COLOR][/B] - Source Select</label>
-                <visible>
-                    !String.IsEmpty(Window(home).Property(plugin.video.lu.autoPlay)) +
-                    !String.IsEmpty(Window(home).Property(context.lu.sourceSelect)) +
-                    String.StartsWith(ListItem.FolderPath,plugin://plugin.video.lu/?action=play) +
-                    String.IsEqual(ListItem.Property(isLU_widget),true) +
-                    [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
-                </visible>
-            </item>
-            <item library="findSimilar.py">
-                <label>[B][COLOR springgreen]LU[/COLOR][/B] - Find Similar</label>
-                <visible>
-                    !String.IsEmpty(Window(home).Property(context.lu.findSimilar)) +
-                    String.StartsWith(ListItem.path,plugin://plugin.video.lu/) +
-                    String.IsEqual(ListItem.Property(isLU_widget),true) +
-                    [String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
-                </visible>
-            </item>
-            <item library="browseSeries.py">
-                <label>[B][COLOR springgreen]LU[/COLOR][/B] - Browse Series</label>
-                <visible>
-                    !String.IsEmpty(Window(home).Property(context.lu.browseSeries)) +
-                    String.StartsWith(ListItem.path,plugin://plugin.video.lu/) +
-                    String.IsEqual(ListItem.Property(isLU_widget),true) +
-                    [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow)]
-                </visible>
-            </item>
-            <item library="browseEpisodes.py">
-                <label>[B][COLOR springgreen]LU[/COLOR][/B] - Browse Episodes</label>
-                <visible>
-                    !String.IsEmpty(Window(home).Property(context.lu.browseEpisodes)) +
-                    String.StartsWith(ListItem.path,plugin://plugin.video.lu/) +
-                    String.IsEqual(ListItem.Property(isLU_widget),true) +
-                    String.IsEqual(ListItem.dbtype,episode)
-<!--                    [String.IsEqual(ListItem.dbtype,episode) | !String.IsEmpty(ListItem.Property(multi_episodes))] -->
-                </visible>
-            </item>
-        </menu>
-</extension>
-    <extension point="xbmc.service" library="service.py" />
-    <extension point="xbmc.addon.metadata">
-        <summary lang="en">[COLORwhite]Loonatics Unleashed Context[/COLOR]</summary>
-        <description>[COLORwhite]Loonatics Unleashed Context[/COLOR]</description>
-        <platform>all</platform>
-        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-        <forum></forum>
-        <website></website>
-        <source></source>
-        <disclaimer lang="en"></disclaimer>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.png</fanart>
-        </assets>
-        <news></news>
-    </extension>
-</addon>
-
-<addon
-    id="context.lu.trailer"
-    name="   [COLORspringgreen]Loonatics [COLORpalegreen]Unleashed [COLORlime]Trailer [COLORspringgreen]Context[/COLOR]"
-    version="20.9.1"
-    provider-name="[COLORspringgreen]• [COLORpalegreen]Loonatics [COLORspringgreen]•[/COLOR]">
-    <requires>
-        <import addon="xbmc.python" version="2.25.0"/>
-        <import addon="script.module.requests" version="2.19.1" />
-        <import addon="plugin.video.youtube" version="6.2.0"/>
-    </requires>
-    <extension point="kodi.context.item">
-        <menu id="kodi.core.main">
-            <item library="autoplay.py">
-                <label>32000</label>
-                <visible>
-                    String.IsEqual(Window(home).Property(context.trailer.autoplay),true) +
-                    [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,episode)] +
-                    !String.IsEmpty(ListItem.Trailer)
-                </visible>
-            </item>
-            <item library="selectplay.py">
-                <label>32001</label>
-                <visible>
-                    String.IsEqual(Window(home).Property(context.trailer.selectplay),true) +
-                    [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,episode)]
-                </visible>
-            </item>
-        </menu>
-    </extension>
-    <extension point="xbmc.service" library="service.py" />
-    <extension point="kodi.addon.metadata">
-        <summary lang="en">[COLORwhite]Loonatics Unleashed Trailer Context[/COLOR]</summary>
-        <description>[COLORwhite]Loonatics Unleashed Trailer Context[/COLOR]</description>
-        <platform>all</platform>
-        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-        <forum></forum>
-        <website></website>
-        <source></source>
-        <disclaimer lang="en"></disclaimer>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-        </assets>
-        <news></news>
-    </extension>
-</addon>
-
-<addon id="plugin.acme.livenet"
-       name="   [COLORspringgreen]Live[/COLOR][COLORpalegreen]N[/COLOR][COLORlime]et[/COLOR]"
-       version="21.5.20"
-       provider-name="[COLORgreen]• [COLORspringgreen]Tech [COLORpalegreen]E [COLORlime]Coyote [COLORgreen]•[/COLOR]">
-  <requires>
-    <!-- <import addon="xbmc.python" version="2.26.0" /> -->
-    <import addon="script.module.pycryptodome" />
-    <import addon="script.module.dateutil" />
-    <import addon="script.module.pyamf" />
-    <import addon="script.module.kodi-six" />
-    <import addon="script.module.future" />
-    <import addon="script.module.requests" />
-    <import addon="script.module.routing" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-        <summary lang="en">[COLORspringgreen]ACME [COLORpalegreen]LiveNet[/COLOR]</summary>
-        <description>[COLORspringgreen]ACME [COLORpalegreen]LiveNet[/COLOR]</description>
-        <disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
-    <language></language>
-    <platform>all</platform>
-    <license></license>
-    <forum></forum>
-    <website></website>
-    <email></email>
-    <source></source>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
-</addon>
-
-
-<addon id="plugin.acme.swift"
-       name="   [COLORspringgreen]Sw[/COLOR][COLORpalegreen]i[/COLOR][COLORlime]ft[/COLOR]"
-       version="21.7.25"
-       provider-name="[COLORgreen]• [COLORspringgreen]Tech [COLORpalegreen]E [COLORlime]Coyote [COLORgreen]•[/COLOR]">
-  <requires>
-    <!-- <import addon="xbmc.python" version="2.26.0" /> -->
-    <import addon="script.module.pycryptodome" />
-    <import addon="script.module.requests" />
-    <import addon="script.module.kodi-six" />
-    <import addon="script.module.future" />
-    <import addon="script.module.routing" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-  <reuselanguageinvoker>true</reuselanguageinvoker>
-        <summary lang="en">[COLORspringgreen]ACME [COLORpalegreen]Swift[/COLOR]</summary>
-        <description>[COLORspringgreen]ACME [COLORpalegreen]Swift[/COLOR]</description>
-        <disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
-    <language></language>
-    <platform>all</platform>
-    <license></license>
-    <forum></forum>
-    <website></website>
-    <email></email>
-    <source></source>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="plugin.acme.tvnsports"
-       name="   [COLORspringgreen]Tv[/COLOR][COLORpalegreen]N[/COLOR][COLORlime]Sports[/COLOR]"
-       version="21.5.20"
-       provider-name="[COLORgreen]• [COLORspringgreen]Tech [COLORpalegreen]E [COLORlime]Coyote [COLORgreen]•[/COLOR]">
-    <requires>
-        <import addon="script.module.beautifulsoup4" version="3.2.1"/>
-        <import addon="script.module.requests"  />
-        <import addon="script.module.resolveurl" />
-        <import addon="script.module.dateutil"/>
-        <import addon="script.module.pytz"/>
-        <import addon="script.module.tzlocal"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary lang="en">[COLORspringgreen]ACME [/COLOR][COLORpalegreen]Tv [/COLOR][COLORlime]N [/COLOR][COLORspringgreen]Sports[/COLOR]</summary>
-        <description>[COLORspringgreen]ACME [/COLOR][COLORpalegreen]Tv [/COLOR][COLORlime]N [/COLOR][COLORspringgreen]Sports[/COLOR]</description>
-        <disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
-
-        <platform>all</platform>
-
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-    </assets>
-    </extension>
-</addon>
-
-<addon id="plugin.acme.tvtap"
-       name="   [COLORspringgreen]Tv[/COLOR][COLORpalegreen]T[/COLOR][COLORlime]ap[/COLOR]"
-       version="21.5.20"
-       provider-name="[COLORgreen]• [COLORspringgreen]Tech [COLORpalegreen]E [COLORlime]Coyote [COLORgreen]•[/COLOR]">
-  <requires>
-    <!-- <import addon="xbmc.python" version="2.26.0" /> -->
-    <import addon="script.module.pycryptodome" />
-    <import addon="script.module.requests" />
-    <import addon="script.module.kodi-six" />
-    <import addon="script.module.future" />
-    <import addon="script.module.routing" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-        <summary lang="en">[COLORspringgreen]ACME [COLORpalegreen]TvTap[/COLOR]</summary>
-        <description>[COLORspringgreen]ACME [COLORpalegreen]TvTap[/COLOR]</description>
-        <disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
-    <language></language>
-    <platform>all</platform>
-    <license></license>
-    <forum></forum>
-    <website></website>
-    <email></email>
-    <source></source>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="plugin.program.acme"
-       name="[B][COLOR crimson]A[/COLOR][/B][B][COLOR salmon]C[/COLOR][/B][B][COLOR crimson]M[/COLOR][/B][B][COLOR salmon]E[/COLOR][/B] [COLOR crimson]Wizard[/COLOR]"
-       version="20.8.21"
-       provider-name="[COLORgreen]• [COLORspringgreen]Tech [COLORpalegreen]E [COLORlime]Coyote [COLORgreen]•[/COLOR]">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0" />
-        <import addon="script.module.requests" />
-        <import addon="script.module.six" />
-        <import addon="script.kodi.android.update" optional="true" version="1.1.7" />
-    </requires>
-
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>executable</provides>
-    </extension>
-
-    <extension point="xbmc.service" library="startup.py" start="startup" />
-
-    <extension point="xbmc.addon.metadata">
-        <summary lang="en">[B][COLOR crimson]A[/COLOR][/B][B][COLOR salmon]C[/COLOR][/B][B][COLOR crimson]M[/COLOR][/B][B][COLOR salmon]E[/COLOR][/B] [COLOR crimson]Wizard[/COLOR]</summary>
-        <description lang="en">[B][COLOR crimson]A[/COLOR][/B][B][COLOR salmon]C[/COLOR][/B][B][COLOR crimson]M[/COLOR][/B][B][COLOR salmon]E[/COLOR][/B] [COLOR crimson]Wizard[/COLOR]</description>
-        <platform>all</platform>
-        <reuselanguageinvoker>false</reuselanguageinvoker>
-        <source></source>
-        <news>
- - Initial Commit
-        </news>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.png</fanart>
-        </assets>
-    </extension>
-</addon>
-
-    <addon id="plugin.video.acmeplayer"
-    version="20.8.29"
-    name="   [COLORspringgreen]ACME [COLORpalegreen]Player[/COLOR]"
-    provider-name="[COLORspringgreen]• [COLORpalegreen]Loonatics [COLORspringgreen]•[/COLOR]">
-    <requires>
-        <import addon="xbmc.python" version="2.25.0"/>
-        <import addon="metadata.tvdb.com" version="3.0.14"/>
-        <import addon="script.module.futures" version="2.2.0"/>
-        <import addon="script.module.requests" version="2.19.1"/>
-        <import addon="script.module.requests-cache" version="0.4.13"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="addon.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.service" library="service.py"/>
-    <extension point="kodi.context.item">
-        <menu id="kodi.core.main">
-            <item library="context.py">
-                <label>ACME Player - Default Player</label>
-                <visible>!String.StartsWith(ListItem.path,plugin://plugin.video.acmeplayer/)+[String.IsEqual(ListItem.dbtype,episode)|String.IsEqual(ListItem.dbtype,movie)]</visible>
-            </item>
-            <item library="context2.py">
-                <label>ACME Player - Choose Player</label>
-                <visible>String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)</visible>
-            </item>
-        </menu>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <summary lang="en">TMDb, TVDb and Trakt browser</summary>
-        <description lang="en">Browse The MovieDb, The TVDb, Trakt and pass info along to library or an addon. Needs player-files and the appropriate addon to play the files.</description>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-        </assets>
-        <license></license>
-        <forum></forum>
-        <website></website>
-        <source></source>
-        <news>
-        </news>
-    </extension>
-</addon>
-
-<addon id="plugin.video.elementum" name="Elementum" version="0.1.58" provider-name="elgatito">
-    <requires>
-        <import addon="xbmc.addon" version="16.0.0" />
-        <import addon="repository.elementum" optional="true" />
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="navigation.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.service" library="service.py" start="startup" />
-    <extension point="xbmc.python.module" library="resources/site-packages" />
-    <extension point="xbmc.subtitle.module" library="navigation.py" />
-    <extension point="xbmc.addon.metadata">
-        <summary lang="en">Elementum: Media streaming</summary>
-        <summary lang="hr">Elementum: Medijsko strujanje</summary>
-        <summary lang="es">Elementum: Transmisión de medios</summary>
-        <description lang="en">Elementum is a torrent finding and streaming engine. It doesn't go on torrent websites for legal reasons. However, it calls specially crafted add-ons (called providers) that are installed separately.[CR]This project is a fork of the well known, but no longer maintained Pulsar/Quasar projects from steeve and scakemyer.</description>
-        <description lang="hr">Elementum je pogon pretraživanja i strujanja. Ne posjećuje torrent web stranice iz pravnih razloga. Ipak, koristi posebno napravljene dodatke (nazvane pružatelji usluge) koji su instalirani odvojeno.[CR]Ovaj projekt je ogranak dobro poznatih, ali više ne održavanih Pulsar/Quasar projekata od autora steevea i scakemyera.</description>
-        <description lang="es">Elementum es un motor de búsqueda y transmisión torrent. No navega por sitios web torrent por razones legales. Sin embargo, llama a complementos especialmente diseñados para ello (denominados providers o proveedores) que se instalan por separado.[CR]Este proyecto es un fork de los bien conocidos, pero ya sin soporte proyectos Pulsar/Quasar de steeve y scakemyer.[CR]</description>
-        <disclaimer lang="en">The author does not own or host any content found within this Addon. The author is not connected to or in any other way affiliated with Kodi, Team Kodi, or the XBMC Foundation.</disclaimer>
-        <disclaimer lang="hr">Autor ovog dodatka ne posjeduje i ne distribuira bilo kakav sadržaj koji je pronađen. Autor nije povezan sa ili na bilo koji drugi način bilo sa Kodijem, Team Kodijem ili XBMC fundacijom.</disclaimer>
-        <disclaimer lang="es">El autor no posee ni aloja ningún contenido que se encuentre a través de este complemento. El autor no está unido ni relacionado de ninguna manera con Kodi, Team Kodi, o XBMC Foundation.</disclaimer>
-        <language>en el es de fi fr he hr it nl pt ro sk</language>
-        <platform>all</platform>
-        <website>http://elementum.surge.sh/</website>
-        <source>https://github.com/elgatito/plugin.video.elementum</source>
-        <forum></forum>
-        <license>Non commercial. See https://github.com/elgatito/plugin.video.elementum/blob/master/LICENSE</license>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.png</fanart>
-            <screenshot>resources/screenshots/home.png</screenshot>
-            <screenshot>resources/screenshots/movies.png</screenshot>
-            <screenshot>resources/screenshots/webui.png</screenshot>
-        </assets>
-    </extension>
-</addon>
-
-<addon id="plugin.video.f4mTester" version="3.0.0" name="F4mTester" provider-name="Shani">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-        <import addon="script.video.F4mProxy" version="2.7.1"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-    </extension>
-    
-
-    <extension point="xbmc.addon.metadata">
-        <summary>f4mTester</summary>
-        <description></description>
-        <platform>all</platform>
-    </extension>
-</addon>
-
-<addon id="plugin.video.loonatics3000"
-       name="  [COLORspringgreen]L[COLORpalegreen]o[COLORlime]o[COLORred]N[COLORcrimson]a[COLORmediumpurple]t[COLORmediumorchid]i[COLORorangered]c[COLORorange]s [COLORmagenta]3[COLORpink]0[COLORyellow]0[COLORkhaki]0[/COLOR]"
-       version="20.9.27"
-       provider-name="[COLORgreen]• [COLORspringgreen]Tech [COLORpalegreen]E [COLORlime]Coyote [COLORgreen]•[/COLOR] [COLORwhite]/[/COLOR] [COLORred]Rev[/COLOR] [COLORcrimson]Run[/COLOR][COLORsalmon]ner[/COLOR]">
-  <requires>
-    <import addon="plugin.video.SportsDevil" optional="true" />
-    <import addon="plugin.video.youtube"/>
-    <import addon="script.common.plugin.cache" version="2.5.5"/>
-    <import addon="script.module.beautifulsoup4" version="4.5.3"/>
-    <import addon="script.module.dateutil"/>
-    <import addon="script.module.feedparser"/>
-    <import addon="script.module.futures" version="2.2.0"/>
-    <import addon="script.module.inputstreamhelper"/>
-    <import addon="script.module.python.koding.aio.alt" version="1.1"/>
-    <import addon="script.module.pyxbmct" version="1.1.4"/>
-    <import addon="script.module.requests"/>
-    <import addon="script.module.resolveurl" version="5.0.00"/>
-    <import addon="script.module.universalscrapers"/>
-    <import addon="xbmc.python" version="2.1.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource"
-            library="default.py">
-        <provides>audio video</provides>
-  </extension>
-  <extension point="xbmc.service" library="service.py" start="startup" />
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">[COLORspringgreen]L[COLORpalegreen]o[COLORlime]o[COLORred]N[COLORcrimson]a[COLORmediumpurple]t[COLORmediumorchid]i[COLORorangered]c[COLORorange]s [COLORmagenta]3[COLORpink]0[COLORyellow]0[COLORkhaki]0[/COLOR][COLORwhite] - We do not host any contents streamed[/COLOR]</summary>
-    <description lang="en">[COLORspringgreen]L[COLORpalegreen]o[COLORlime]o[COLORred]N[COLORcrimson]a[COLORmediumpurple]t[COLORmediumorchid]i[COLORorangered]c[COLORorange]s [COLORmagenta]3[COLORpink]0[COLORyellow]0[COLORkhaki]0[/COLOR][CR][COLORwhite]This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.[CR]The author does not host any of the content in this addon and takes no responsibility for content found.[/COLOR]</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="plugin.video.le"
-    name="   [COLORdeepskyblue]Loonatics [COLORblue]Empire[/COLOR]"
-    provider-name="[COLORgreen]&#8226; [COLORspringgreen]Tech [COLORpalegreen]E [COLORlime]Coyote [COLORgreen]&#8226;[/COLOR]"
-    version="21.7.20">
-    <requires>
-        <import addon="context.le" />
-        <import addon="script.module.myaccounts" />
-        <import addon="script.module.fenomscrapers" />
-        <import addon="script.module.requests" />
-        <import addon="script.module.beautifulsoup4" />
-        <import addon="script.module.six" />
-        <import addon="script.module.kodi-six" />
-        <import addon="script.module.resolveurl" />
-        <import addon="script.module.metahandler" optional="true" />
-        <import addon="plugin.video.youtube" optional="true" />
-        <import addon="script.module.addon.signals" optional="true" />
-        <import addon="plugin.acme.tvnsports" optional="true" />
-        <import addon="plugin.acme.swift" optional="true" />
-        <import addon="plugin.acme.tvtap" optional="true" />
-        <import addon="plugin.acme.livenet" optional="true" />
-        <import addon="plugin.elementum.burst" version="0.0.49" optional="true" />
-        <import addon="plugin.video.elementum" version="0.1.58" optional="true" />
-        <import addon="context.elementum" version="0.0.3" optional="true" />
-    </requires>
-    <extension library="le.py" point="xbmc.python.pluginsource">
-        <provides>video</provides>
-    </extension>
-    <extension library="service.py" point="xbmc.service" start="startup" />
-    <extension library="resources/lib/" point="xbmc.python.module" />
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <reuselanguageinvoker>true</reuselanguageinvoker>
-        <summary lang="en">[COLORdeepskyblue]Loonatics [COLORblue]Empire[/COLOR] [COLORwhite]Movies-TV Shows-Trakt-IMDB-TMDB[/COLOR]</summary>
-        <description>[COLORdeepskyblue]Loonatics [COLORblue]Empire[/COLOR] [COLORwhite]Movies-TV Shows-Trakt-IMDB-TMDB[/COLOR]</description>
-        <disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
-        <forum />
-        <website />
-        <source />
-        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-            <screenshot>resources/screenshots/screenshot000.png</screenshot>
-            <screenshot>resources/screenshots/screenshot001.png</screenshot>
-            <screenshot>resources/screenshots/screenshot002.png</screenshot>
-            <screenshot>resources/screenshots/screenshot003.png</screenshot>
-            <screenshot>resources/screenshots/screenshot004.png</screenshot>
-        </assets>
-        <news />
-    </extension>
-
-</addon>
-
-    <addon  id="plugin.video.lu"
-    version="21.5.16"
-    name="   [COLORspringgreen]Loonatics [COLORpalegreen]Unleashed[/COLOR]"
-    provider-name="[COLORspringgreen]• [COLORpalegreen]Loonatics [COLORspringgreen]•[/COLOR]">
-    <requires>
-        <import addon="xbmc.python" version="2.19.0" />
-        <import addon="script.module.requests" version="2.19.1" />
-        <import addon="script.module.beautifulsoup4" version="4.5.3" />
-        <import addon="script.module.metahandler" version="2.9.0" />
-        <import addon="plugin.video.youtube" version="6.2.0" />
-        <import addon="script.module.resolveurl" />
-        <import addon="script.module.openscrapers" />
-        <import addon="script.module.addon.signals" version="0.0.3" />
-        <import addon="context.lu" optional="true" />
-        <import addon="context.lu.trailer" optional="true" />
-        <import addon="plugin.acme.tvnsports" optional="true" />
-        <import addon="plugin.acme.swift" optional="true" />
-        <import addon="plugin.acme.tvtap" optional="true" />
-        <import addon="plugin.acme.livenet" optional="true" />
-        <import addon="plugin.elementum.burst" version="0.0.49" optional="true" />
-        <import addon="plugin.video.elementum" version="0.1.58" optional="true" />
-        <import addon="context.elementum" version="0.0.3" optional="true" />
-        <import addon="plugin.video.acmeplayer" version="20.6.30" optional="true" />
-    </requires>
-
-    <extension point="xbmc.python.pluginsource" library="lu.py">
-        <provides>video</provides>
-    </extension>
-
-    <extension point="xbmc.service" library="service.py" start="startup" />
-    <extension point="xbmc.python.module" library="resources/lib/"/>
-
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <reuselanguageinvoker>true</reuselanguageinvoker> <!-- You can enable this if you want, expect some instability but much faster menu speeds -->
-        <summary lang="en">[COLORspringgreen]Loonatics [COLORpalegreen]Unleashed[/COLOR] [COLORwhite]Movies-TV Shows-Trakt-IMDB-TMDB[/COLOR]</summary>
-        <description>[COLORspringgreen]Loonatics [COLORpalegreen]Unleashed[/COLOR] [COLORwhite]Movies-TV Shows-Trakt-IMDB-TMDB[/COLOR]</description>
-        <disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
-        <forum></forum>
-        <website></website>
-        <source></source>
-        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-            <screenshot>resources/screenshots/screenshot000.png</screenshot>
-            <screenshot>resources/screenshots/screenshot001.png</screenshot>
-            <screenshot>resources/screenshots/screenshot002.png</screenshot>
-            <screenshot>resources/screenshots/screenshot003.png</screenshot>
-            <screenshot>resources/screenshots/screenshot004.png</screenshot>
-        </assets>
-        <news></news>
-    </extension>
-
-</addon>
-
-<addon id="plugin.video.smr_link_tester" version="1.1.4" name="SMR Link Tester" provider-name="gujal">
-    <requires>
-        <!-- <import addon="xbmc.python" version="3.0.0"/> -->
-        <import addon="script.module.resolveurl"/>
-        <import addon="script.module.resolveurl.xxx"/>
-        <import addon="script.module.six" version="0.0.1"/>
-        <import addon="script.module.kodi-six" version="0.0.1"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary>SMR Link Tester Addon</summary>
-        <description></description>
-        <platform>all</platform>
-        <assets>
-            <icon>icon.png</icon>
-        </assets>
-	</extension>
-</addon>
-
-<addon
-  id="plugin.video.SportsDevil"
-  version="2019.05.25"
-  name="SportsDevil"
-  provider-name="SportsDevil">
-  <requires>
-   <import addon="xbmc.python" version="2.14.0"/>
-   <import addon="script.module.dateutil" />
-   <import addon="script.module.simplejson" />
-   <import addon="script.module.six" />
-   <import addon="script.module.requests" />   
-   <import addon="plugin.video.f4mTester" />
-   <import addon="script.module.slproxy" />
-  </requires>
-  <extension 
-    point="xbmc.python.pluginsource"
-    library="default.py">
-   <provides>video</provides>
-  </extension>
-  <!-- <extension point="xbmc.service" library="service/streamlink_proxy.py" /> -->
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">SportsDevil</summary>
-    <description lang="en">[I]There can only be one.[/I][CR][CR]Unofficial Kodi Addon.</description>
-    <disclaimer lang="en">There can only be one.</disclaimer>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="plugin.video.youtube" name="YouTube" version="6.6.0" provider-name="anxdpanic, bromix">
-    <requires>
-        <import addon="xbmc.python" version="2.20.0"/>
-        <import addon="script.module.six" version="1.11.0"/>
-        <import addon="script.module.requests" version="2.12.4"/>
-        <import addon="script.module.inputstreamhelper" version="0.2.2" optional="true"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="resources/lib/default.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.service" library="resources/lib/startup.py" start="login"/>
-    <extension point="xbmc.python.module" library="resources/lib/"/>
-    <extension point="xbmc.addon.metadata">
-        <news>
-[add] 'Play (Ask for quality)' context menu
-[add] search by channel or playlist id
-[add] hide_folders, hide_playlists, hide_search, and hide_live to /channel/&lt;channel_id&gt;/ end-point
-    - ie. plugin://plugin.video.youtube/channel/UC4PooiX37Pld1T8J5SYT-SQ/?hide_folders=true will hide all folders(Playlists, Search, and Live) in the channel listing
-[fix] playback for some videos (ie. music videos)
-[fix] playback of some videos with no adaptive video streams
-[fix] don't update watch history when incognito/screensaver/live |contrib: regseb|
-[fix] search prompting for input after video playback or refresh
-[lang] el_gr strings |contrib: twilight0|
-[lang] es_es strings |contrib: roliverosc|
-[lang] pt_br strings |contrib: MediaBrasil|
-[lang] cs_cz strings |contrib: llzn.cz|
-[lang] it_it strings |contrib: SebastianoPistore|
-[lang] de_de strings |contrib: tweimer|
-        </news>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-        </assets>
-        <summary lang="en_GB">Plugin for YouTube</summary>
-        <description lang="en_GB">YouTube is one of the biggest video-sharing websites of the world.</description>
-        <disclaimer lang="en_GB">This plugin is not endorsed by Google</disclaimer>
-        <summary lang="he_IL">תוסף עבור YouTube</summary>
-        <description lang="he_IL">YouTube הוא אחד מאתרי שיתוף הווידאו הגדולים בעולם.</description>
-        <summary lang="de_DE">Plugin für YouTube</summary>
-        <description lang="de_DE">YouTube ist eines der größten Video-Sharing-Websites der Welt.</description>
-        <summary lang="pl_PL">Wtyczka YouTube</summary>
-        <description lang="pl_PL">YouTube jest jednym z największych na świecie serwisów udostępniania wideo.</description>
-        <summary lang="hu_HU">YouTube kiegészítő</summary>
-        <description lang="hu_HU">A YouTube világ egyik legnagyobb videómegosztó weboldala.</description>
-        <summary lang="es_ES">Plugin para YouTube</summary>
-        <description lang="es_ES">YouTube es uno de los sitios web para compartir videos más grande del mundo.</description>
-        <disclaimer lang="es_ES">Este add-on no está respaldado por Google</disclaimer>
-        <summary lang="es_MX">Plugin para YouTube</summary>
-        <description lang="es_MX">YouTube es uno de los más grandes sitios web de intercambio de videos del mundo.</description>
-        <disclaimer lang="es_MX">Este add-on no está respaldado por Google</disclaimer>
-        <summary lang="ru_RU">Видеодополнение YouTube</summary>
-        <description lang="ru_RU">YouTube - популярнейший видеохостинговый сайт, предоставляющий пользователям услуги хранения, доставки и показа видео.</description>
-        <summary lang="fr_FR">Plugin pour YouTube</summary>
-        <description lang="fr_FR">YouTube est l'un des plus grands sites de partage vidéos du monde.</description>
-        <summary lang="zh_CN">YouTube附加元件</summary>
-        <description lang="zh_CN">「Youtube」是全世界最大的影片分享網站</description>
-        <summary lang="zh_TW">YouTube附加元件</summary>
-        <description lang="zh_TW">「Youtube」是全世界最大的影片分享網站</description>
-        <disclaimer lang="zh_TW">此附加元件未由Google支持</disclaimer>
-        <summary lang="bg_BG">Добавка за YouTube</summary>
-        <description lang="bg_BG">YouTube е един от най-големите уеб сайтове за споделяне на видео в целия свят.</description>
-        <summary lang="el_GR">Πρόσθετο YouTube</summary>
-        <description lang="el_GR">Το YouTube είναι μία από τις μεγαλύτερες ιστοσελίδες διαμοιρασμού βίντεο στον κόσμο.</description>
-        <disclaimer lang="el_GR">Η παρούσα μικροεφαρμογή δεν έχει υϊοθετηθεί από την Google</disclaimer>
-        <summary lang="nb_NO">Tillegg for YouTube</summary>
-        <description lang="nb_NO">YouTube er en av verdens største nettsider for videodeling.</description>
-        <summary lang="ko_KR">유튜브 플러그인</summary>
-        <description lang="ko_KR">유튜브는 세상에서 가장 큰 동영상 공유 사이트 중의 하나입니다.</description>
-        <summary lang="cs_CZ">Plugin pro YouTube</summary>
-        <description lang="cs_CZ">YouTube je jedna z největších webových stránek světa sdílející video.</description>
-        <disclaimer lang="cs_CZ">Tento plugin není schválen společností Google</disclaimer>
-        <summary lang="tr_TR">YouTube için eklenti</summary>
-        <description lang="tr_TR">YouTube, dünya üzerindeki en büyük video paylaşma platformlarından birisidir</description>
-        <disclaimer lang="tr_TR">Bu eklenti Google tarafından üretilmemiştir</disclaimer>
-        <language></language>
-        <platform>all</platform>
-        <license>GPL-2.0-only</license>
-        <forum>https://forum.kodi.tv/showthread.php?tid=348464</forum>
-        <website>https://www.youtube.com</website>
-        <email>ytplugin at datanet dot ws</email>
-        <source>https://github.com/jdf76/plugin.video.youtube</source>
-        <reuselanguageinvoker>true</reuselanguageinvoker>
-    </extension>
-</addon>
-
-<addon id="script.elementum.burst" name="Elementum [COLOR FFFF6B00]Burst[/COLOR]" version="0.0.49" provider-name="elgatito">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-        <import addon="plugin.video.elementum" optional="true"/>
-    </requires>
-    <extension point="xbmc.python.script" library="burst.py">
-        <provides>executable</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary lang="en">Elementum torrents provider</summary>
-        <summary lang="hr">Elementum torrent pružatelji usluga</summary>
-		<summary lang="es">Proveedor de torrents Elementum</summary>
-        <description lang="en">Elementum Burst is a lean and mean multi-provider for Elementum.</description>
-        <description lang="hr">Elementum Burst je višestruki pružatelj usluga za Elementum.</description>
-		<description lang="es">Elementum Burst es un multi-proveedor simple y eficiente para Elementum.</description>
-        <disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content providers.</disclaimer>
-		<disclaimer lang="hr">Autor ovog dodatka ne posjeduje i ne distribuira bilo kakav sadržaj koji je pronađen. Autor nije povezan sa bilo kojim izvorom sadržaja.</disclaimer>
-		<disclaimer lang="es">El autor no aloja ni distribuye ninguno de los contenidos mostrados por este complemento. El autor no tiene ninguna afiliación con los proveedores de contenido.</disclaimer>    
-		<license>WTFPL, Version 2, December 2004. See included LICENSE.</license>
-        <website>https://elementum.surge.sh</website>
-        <source>https://github.com/elgatito/script.elementum.burst</source>
-        <forum>TODO</forum>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-        </assets>
-    </extension>
-</addon>
-
-<addon id="script.extendedinfo"
-        name="   [COLORspringgreen]ACME [COLORpalegreen]Info[/COLOR]"
-        version="20.8.29"
-        provider-name="[COLORspringgreen]• [COLORpalegreen]Loonatics [COLORspringgreen]•[/COLOR]">
-    <requires>
-        <import addon="xbmc.python" version="2.25.0"/>
-        <import addon="script.module.pil" version="1.1.7"/>
-        <import addon="plugin.video.youtube" version="6.2.2"/>
-        <import addon="script.module.requests" version="2.9.1"/>
-        <import addon="script.skin.helper.service" version="1.0.0"/>
-        <import addon="resource.images.studios.white" version="0.0.18"/>
-        <import addon="plugin.video.acmeplayer" optional="true"/>
-    </requires>
-    <extension point="xbmc.python.script" library="script.py"/>
-    <extension point="xbmc.python.pluginsource" library="plugin.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="kodi.context.item">
-        <menu id="kodi.core.main">
-            <item library="context.py">
-                <label>ACME Info</label>
-                <visible>String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,actor) | String.IsEqual(ListItem.dbtype,director)</visible>
-            </item>
-        </menu>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <reuselanguageinvoker>false</reuselanguageinvoker>
-        <platform>all</platform>
-        <summary></summary>
-        <description>This script offers various possibilities to display online content inside skins as well as a complete MovieDB browser including info dialogs for various media types. Needs skin implementation for lot of functions and Acme Player for library functions.</description>
-        <assets>
-            <icon>resources/icon.png</icon>
-            <fanart>resources/fanart.jpg</fanart>
-            <screenshot></screenshot>
-            <screenshot></screenshot>
-            <screenshot></screenshot>
-        </assets>
-        <news>
-        </news>
-    </extension>
-</addon>
-
-<addon id="script.ezmaintenanceplus" name="EZ Maintenance+" version="2019.05.10.3" provider-name="aenema">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.requests" version="1.0.0" />
-    <import addon="repository.aenemapy" version="1.0.0" />		
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py"> 
-     <provides>video executable</provides> 
-  </extension> 
-  <extension point="xbmc.service" library="service.py" start="startup" />
-  <extension point="xbmc.addon.metadata">
-	<summary>A Streamlined Utility Tool for Kodi</summary>
-	<description>No Bloatware, no Nonsense! Just Keep your Kodi sharp and clean with this utility tool... Now with a Custom Wizard.</description>
-    <language></language>
-    <platform>all</platform>
-    <license>The MIT License</license>
-    <forum>-</forum>
-    <source>https://github.com</source>
-  </extension>
-</addon>
-
-<addon id="script.favourites" name="Favourites script" version="7.1.3" provider-name="ronie, `Black">
-	<requires>
-		<import addon="xbmc.python" version="2.25.0"/>
-	</requires>
-	<extension point="xbmc.python.library" library="default.py"/>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="be_BY">Favourites script</summary>
-		<summary lang="bg_BG">Скрипт "Любими"</summary>
-		<summary lang="ca_ES">Script Preferit</summary>
-		<summary lang="cs_CZ">Script pro Oblíbené</summary>
-		<summary lang="da_DK">Favoritscript</summary>
-		<summary lang="de_DE">Favoriten-Skript</summary>
-		<summary lang="el_GR">Script Αγαπημένων</summary>
-		<summary lang="en_GB">Favourites script</summary>
-		<summary lang="en_NZ">Favourites script</summary>
-		<summary lang="en_US">Favorites script</summary>
-		<summary lang="es_ES">Script de Favoritos</summary>
-		<summary lang="es_AR">Favoritos</summary>
-		<summary lang="fi_FI">Suosikit skripti</summary>
-		<summary lang="fr_FR">Script Favoris</summary>
-		<summary lang="fr_CA">Le script des favoris</summary>
-		<summary lang="gl_ES">Script de Favoritos</summary>
-		<summary lang="he_IL">סקריפט מועדפים</summary>
-		<summary lang="hr_HR">Omiljene skripte</summary>
-		<summary lang="hu_HU">Kedvencek script</summary>
-		<summary lang="id_ID">Script favorit</summary>
-		<summary lang="it_IT">Script preferiti</summary>
-		<summary lang="ko_KR">즐겨찾기 스크립트</summary>
-		<summary lang="lt_LT">Mėgstamiausių skriptas</summary>
-		<summary lang="nl_NL">Favourietenscript</summary>
-		<summary lang="nb_NO">Favorittskript</summary>
-		<summary lang="pl_PL">Skrypt ulubionych</summary>
-		<summary lang="pt_PT">Script de Favoritos</summary>
-		<summary lang="pt_BR">Script Favoritos</summary>
-		<summary lang="ro_RO">Script Favorite</summary>
-		<summary lang="ru_RU">Скрипт "Избранное"</summary>
-		<summary lang="sv_SE">Favoritskript</summary>
-		<summary lang="tr_TR">Sık kullanılanlar betiği</summary>
-		<summary lang="zh_CN">收藏夹脚本</summary>
-		<description lang="be_BY">Fetches item from your Kodi favourites to populate Home menu/submenu with custom buttons.</description>
-		<description lang="bg_BG">Извлича информация от вашето меню "Любими" и показва допълнителни бутони в главното меню и подменюто.</description>
-		<description lang="ca_ES">Obtenir els temes Preferits dels seus Kodi per omplir el menú Inici / submenú amb botons personalitzats.</description>
-		<description lang="cs_CZ">Přenese položky z Oblíbených do Home menu/submenu pod vlastní tlačítka. </description>
-		<description lang="da_DK">Henter elementer fra din Kodi-favoritter til at fylde Hjemmemenu/undermenu med brugerbestemte knapper.</description>
-		<description lang="de_DE">Stellt die Einträge aus der Kodi-Favoriten-Liste für benutzerdefinierte Verknüpfungen auf dem Startbildschirm zur Verfügung.</description>
-		<description lang="el_GR">Χρησιμοποιεί αντικείμενα από τα αγαπημένα σας του Kodi για να συμπληρώσει τα προσαρμοσμένα πλήκτρα μενού/υπομενού της Αρχικής Οθόνης</description>
-		<description lang="en_GB">Fetches item from your Kodi favourites to populate Home menu/submenu with custom buttons.</description>
-		<description lang="en_NZ">Fetches item from your Kodi favourites to populate Home menu/submenu with custom buttons.</description>
-		<description lang="en_US">Fetches item from your Kodi favorites to populate Home menu/submenu with custom buttons.</description>
-		<description lang="es_ES">Usar ítems de tus favoritos de Kodi para crear menús y submenús personalizados</description>
-		<description lang="es_AR">Obtiene medios de sus favoritos en Kodi para enriquecer su menu inicio y sub carpetas con botones personalizados</description>
-		<description lang="fi_FI">Hakee Kodin suosikeista kohteita ja populoi sillä Koti-valikon / alivalikon muokatuilla napeilla.</description>
-		<description lang="fr_FR">Récupère l'élément depuis les favoris Kodi pour remplir le menu/sous-menu de la page d'accueil avec des boutons personnalisés.</description>
-		<description lang="fr_CA">Récupère l'élément de vos favoris Kodi pour remplir le menu d'accueil/le sous-menu avec des boutons personnalisés.</description>
-		<description lang="gl_ES">Obtén o elemento dos favoritos para estabelecer botóns personalizados no Menú Principal/Submenú</description>
-		<description lang="he_IL">מייבא פריט מהמועדפים שלך לאכלוס תפריט/תת תפריט עם לחצנים מותאמים אישית במסך הבית.</description>
-		<description lang="hr_HR">Dohvaća stavke iz vašeg Kodi 'Omiljeno' izbornika i popunjava Početni izbornik/podizbornik s prilagođenim tipkama.</description>
-		<description lang="hu_HU">Összegyűjti az elemeket az Kodi kedvencek közül és a központi menü almenüjébe helyezi egyedi gombokkal.</description>
-		<description lang="id_ID">Ambil item dari favorit Kodi Anda untuk mengisi menu/submenu Beranda dengan tombol suka-suka.</description>
-		<description lang="it_IT">Preleva elementi dai tuoi preferiti per popolare il menù principale ed i sottomenù con bottoni personalizzato.</description>
-		<description lang="ko_KR">Kodi 즐겨찾기에서 항목을 가져와 사용자 설정 버튼으로 홈 메뉴/서브메뉴에 표시합니다.</description>
-		<description lang="lt_LT">Paima elementus iš Kodi mėgstamiausiųjų, kad užpildytų pagrindinio meniu/submeniu individualiais mygtukais.</description>
-		<description lang="nl_NL">Haalt item van je Kodi favorieten op om in het Home menu/submenu te plaatsen via losse buttons.</description>
-		<description lang="nb_NO">Henter oppføringer fra favorittene dine i Kodi for å befolke hovedmenyen og undermenyen med egendefinerte knapper.</description>
-		<description lang="pl_PL">Pobiera pozycje z twoich ulubionych w celu zapełnienia menu/podmenu niestandardowymi przyciskami.</description>
-		<description lang="pt_PT">Obtém itens dos seus favoritos do Kodi para povoar o Menu Principal/submenu com botões personalizados.</description>
-		<description lang="pt_BR">Compila itens dos seus favoritos do Kodi para ocupar menus e submenus da tela inicial com botões personalizados.</description>
-		<description lang="ru_RU">Извлекает информацию из Вашего меню "Избранное" и отображает дополнительные кнопки в главном меню и подменю.</description>
-		<description lang="sv_SE">Hämtar objekt från dina Kodi-favoriter för att fylla ut hem-menyn med egna knappar.</description>
-		<description lang="zh_CN">将 Kodi 收藏夹项目用于主界面菜单/子菜单的自定义按钮。</description>
-		<disclaimer lang="be_BY">Needs skin support for it to be used properly</disclaimer>
-		<disclaimer lang="bg_BG">Необходима е поддръжка от страна на облика за коректно функциониране</disclaimer>
-		<disclaimer lang="ca_ES">Necessita Suport de la pell perquè sigui utilitzat correctament</disclaimer>
-		<disclaimer lang="cs_CZ">Pro správné použití je potřeba podpora skinu.</disclaimer>
-		<disclaimer lang="da_DK">Behøver skinsupport for at blive brugt ordentligt</disclaimer>
-		<disclaimer lang="de_DE">Benötigt Skin-Support um korrekt genutzt zu werden</disclaimer>
-		<disclaimer lang="el_GR">Απαιτείται υποστήριξη από το κέλυφος για να χρησιμοποιηθεί σωστά</disclaimer>
-		<disclaimer lang="en_GB">Needs skin support for it to be used properly</disclaimer>
-		<disclaimer lang="en_NZ">Needs skin support for it to be used properly</disclaimer>
-		<disclaimer lang="en_US">Needs skin support for it to be used properly</disclaimer>
-		<disclaimer lang="es_ES">Necesita ser soportado por el skin para poder funcionar correctamente</disclaimer>
-		<disclaimer lang="es_AR">Necesita soporte de mascara para ser usada correctamente</disclaimer>
-		<disclaimer lang="fi_FI">Toimiakseen kunnolla, skinin tulee tukea tätä</disclaimer>
-		<disclaimer lang="fr_FR">Nécessite le support du thème pour qu'il soit utilisé correctement</disclaimer>
-		<disclaimer lang="fr_CA">Le prise en charge de l'habillage est nécessaire pour qu'il soit utilisé correctement</disclaimer>
-		<disclaimer lang="gl_ES">Precisa da axuda da pel para que sexa utilizado correctamente</disclaimer>
-		<disclaimer lang="he_IL">להפעלה כראוי נדרשת תמיכה במעטפת</disclaimer>
-		<disclaimer lang="hr_HR">Zahtijeva podršku presvlake za ispravno korištenje</disclaimer>
-		<disclaimer lang="hu_HU">Felszín támogatás szükséges a helyes működéshez</disclaimer>
-		<disclaimer lang="id_ID">Memerlukan dukungan kulit untuk dapat digunakan dengan baik</disclaimer>
-		<disclaimer lang="it_IT">E' necessario che lo skin supporti lo script per funzionare correttamente</disclaimer>
-		<disclaimer lang="ko_KR">스킨에서 지원해야 합니다</disclaimer>
-		<disclaimer lang="lt_LT">Reikalingas teminės išvaizdos palaikymas tinkamam naudojimui</disclaimer>
-		<disclaimer lang="nl_NL">Heeft skinondersteuning nodig om correct te werken</disclaimer>
-		<disclaimer lang="nb_NO">Krever skallstøtte for å fungere riktig</disclaimer>
-		<disclaimer lang="pl_PL">Wymagane wsparcie skórki w celu poprawnego działania</disclaimer>
-		<disclaimer lang="pt_PT">Necessita de um tema compatível para funcionar correctamente.</disclaimer>
-		<disclaimer lang="pt_BR">Necessita de suporte da skin para ser usado adequadamente</disclaimer>
-		<disclaimer lang="ro_RO">Necesită suport din partea costumului pentru a fi folosit cum trebuie</disclaimer>
-		<disclaimer lang="ru_RU">Необходима поддержка скинов для корректного отображения</disclaimer>
-		<disclaimer lang="sl_SI">Potrebuje podporo preobleke, da bo uporabljeno pravilno.</disclaimer>
-		<disclaimer lang="sv_SE">Behöver skalsupport för att kunna användas riktigt</disclaimer>
-		<disclaimer lang="tr_TR">Düzgün kullanılabilmesi için dış görünüm desteğine ihtiyacınız var</disclaimer>
-		<disclaimer lang="zh_CN">正常使用需要皮肤支持</disclaimer>
-		<language></language>
-		<platform>all</platform>
-		<license>GNU GENERAL PUBLIC LICENSE Version 2</license>
-		<forum>https://forum.kodi.tv/showthread.php?tid=114671</forum>
-		<source>https://gitlab.com/ronie/script.favourites</source>
-		<assets>
-			<icon>resources/icon.png</icon>
-		</assets>
-	</extension>
-</addon>
-
-<addon id="script.hideosd" version="2018.05.20" name="Hide Video OSD" provider-name="aenema">
-	<requires>
-		<import addon="xbmc.python" version="2.10.0" />
-	</requires>
-	<extension point="xbmc.python.pluginsource" library="main.py">
-		<provides>executable</provides>
-	</extension>
-	<extension point="xbmc.service" library="service.py" start="startup" />
-	<extension point="xbmc.addon.metadata">
-        <description>A Simple script to autohide video osd for inactivity. Timeout can be set in the addon settings</description>
-	
-		<summary lang="en">Autohide Video OSD</summary>
-		<platform>all</platform>
-		<forum>-</forum>
-		<website>-</website>
-		<source>-</source>
-		<news>-</news>
-	</extension>
-</addon>
-
-<addon  id="script.lu.livenet" version="21.3.14"
-        name="   [COLORspringgreen]Loonatics [COLORpalegreen]Unleashed[/COLOR] [COLORspringgreen]Live[COLORpalegreen]NET[/COLOR]"
-        provider-name="[COLORspringgreen]• [COLORpalegreen]Loonatics [COLORspringgreen]•[/COLOR]">
-  <requires>
-    <import addon="xbmc.python" version="2.26.0" />
-    <import addon="script.module.pycryptodome" />
-    <import addon="script.module.dateutil" />
-    <import addon="script.module.pyamf" />
-    <import addon="script.module.kodi-six" />
-    <import addon="script.module.future" />
-    <import addon="script.module.requests" />
-    <import addon="script.module.routing" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-        <summary lang="en">[COLORspringgreen]Loonatics [COLORpalegreen]Unleashed[/COLOR] [COLORwhite]LiveNet[/COLOR]</summary>
-        <description>[COLORspringgreen]Loonatics [COLORpalegreen]Unleashed[/COLOR] [COLORwhite]LiveNet[/COLOR]</description>
-        <disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
-    <language></language>
-    <platform>all</platform>
-    <license></license>
-    <forum></forum>
-    <website></website>
-    <email></email>
-    <source></source>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
-</addon>
-
-<addon  id="script.lu.swift" version="21.1.6"
-        name="   [COLORspringgreen]Loonatics [COLORpalegreen]Unleashed[/COLOR] [COLORspringgreen]Swift[COLORpalegreen]Streamz[/COLOR]"
-        provider-name="[COLORspringgreen]• [COLORpalegreen]Loonatics [COLORspringgreen]•[/COLOR]">
-  <requires>
-    <import addon="xbmc.python" version="2.26.0"/>
-    <import addon="script.module.pycryptodome" />
-    <import addon="script.module.requests" />
-    <import addon="script.module.kodi-six" />
-    <import addon="script.module.future" />
-    <import addon="script.module.routing" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-  <reuselanguageinvoker>true</reuselanguageinvoker>
-        <summary lang="en">[COLORspringgreen]Loonatics [COLORpalegreen]Unleashed[/COLOR] [COLORwhite]SwiftStreamz[/COLOR]</summary>
-        <description>[COLORspringgreen]Loonatics [COLORpalegreen]Unleashed[/COLOR] [COLORwhite]SwiftStreamz[/COLOR]</description>
-        <disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
-    <language></language>
-    <platform>all</platform>
-    <license></license>
-    <forum></forum>
-    <website></website>
-    <email></email>
-    <source></source>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
-</addon>
-
-<addon  id="script.lu.tvtap" version="20.10.23"
-        name="   [COLORspringgreen]Loonatics [COLORpalegreen]Unleashed[/COLOR] [COLORspringgreen]Tv[COLORpalegreen]Tap[/COLOR]"
-        provider-name="[COLORspringgreen]• [COLORpalegreen]Loonatics [COLORspringgreen]•[/COLOR]">
-  <requires>
-    <import addon="xbmc.python" version="2.26.0"/>
-    <import addon="script.module.pycryptodome" />
-    <import addon="script.module.requests" />
-    <import addon="script.module.kodi-six" />
-    <import addon="script.module.future" />
-    <import addon="script.module.routing" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-    <provides>all</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-        <summary lang="en">[COLORspringgreen]Loonatics [COLORpalegreen]Unleashed[/COLOR] [COLORwhite]TvTap[/COLOR]</summary>
-        <description>[COLORspringgreen]Loonatics [COLORpalegreen]Unleashed[/COLOR] [COLORwhite]TvTap[/COLOR]</description>
-        <disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
-    <language></language>
-    <platform>all</platform>
-    <license></license>
-    <forum></forum>
-    <website></website>
-    <email></email>
-    <source></source>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="script.module.cherrypy"
-       name="CherryPy Kodi module"
-       version="11.0.1"
-       provider-name="marcelveldt, CherryPy Team">
-    <requires>
-        <import addon="xbmc.python" version="2.24.0"/>
-        <import addon="script.module.six" version="1.9.0"/>
-    </requires>
-    <extension point="xbmc.python.module" library="lib" />
-    <extension point="xbmc.addon.metadata">
-        <summary>CherryPy webserver packaged as Kodi module</summary>
-        <description>CherryPy is a pythonic, object-oriented web framework
-            CherryPy allows developers to build web applications in much the same way they would build any other object-oriented Python program. This results in smaller source code developed in less time.
-            CherryPy is now more than ten years old and it is has proven to be very fast and stable. It is being used in production by many sites, from the simplest to the most demanding.
-        </description>
-        <license>BSD</license>
-        <source>https://github.com/marcelveldt/script.module.cherrypy</source>
-        <platform>all</platform>
-    </extension>
-</addon>
-
-<addon id="script.module.cryptolib" name="Crypto Libraries" version="1.1.1" provider-name="Twilight0">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-  </requires>
-  <extension point="xbmc.python.module" library="lib" />
-  <extension point="xbmc.addon.metadata">
-    <summary>Pure Python implementation of some cryptographic libraries</summary>
-    <source>https://github.com/Twilight0/script.module.cryptolib</source>
-    <platform>all</platform>
-    <license>MIT</license>
-  </extension>
-</addon>
-
-<addon id="script.module.js2py" name="js2py" version="0.6.7" provider-name="Addons4Kodi">
-  <requires>
-    <import addon="xbmc.python" version="2.25.0"/>
-    <import addon="script.module.six" version="1.11.0"/>
-    <import addon="script.module.pyjsparser" version="2.7.1"/>
-    <import addon="script.module.tzlocal" version="1.5.1"/>
-  </requires>
-  <extension point="xbmc.python.module" library="lib" />
-  <extension point="xbmc.addon.metadata">
-    <summary>Pure Python JavaScript Translator/Interpreter</summary>
-    <description>Packed for Kodi from https://github.com/PiotrDabkowski/Js2Py</description>
-    <platform>all</platform>
-    <language></language>
-    <license>MIT</license>
-    <forum></forum>
-    <website>https://github.com/PiotrDabkowski/Js2Py</website>
-    <source>https://github.com/PiotrDabkowski/Js2Py</source>
-    <email></email>
-  </extension>
-</addon>
-
-<addon id="script.module.metalibrary" name="Meta Library" version="2019.02.20" provider-name="aenema">
-	<requires>
-		<import addon="xbmc.python" version="2.1.0" />
-	</requires>
-	<extension point="xbmc.python.module" library="lib" />
-	<extension point="xbmc.python.pluginsource" library="lib/default.py" />
-	<extension point="xbmc.addon.metadata">
-		<platform>all</platform>
-		<summary lang="en">meta database for fast Images.</summary>
-		<description lang="en">Meta DB</description>
-        <source>unknown</source>
-	</extension>
-</addon>
-
-<addon id="script.module.pyjsparser" name="pyjsparser" version="2.7.2a" provider-name="Addons4Kodi">
-  <requires>
-    <import addon="xbmc.python" version="2.25.0"/>
-  </requires>
-  <extension point="xbmc.python.module" library="lib" />
-  <extension point="xbmc.addon.metadata">
-    <summary>Pure Python JavaScript Translator/Interpreter</summary>
-    <description>Packed for Kodi from https://github.com/PiotrDabkowski/pyjsparser</description>
-    <platform>all</platform>
-    <language></language>
-    <license>MIT</license>
-    <forum></forum>
-    <website>https://github.com/PiotrDabkowski/pyjsparser</website>
-    <source>https://github.com/PiotrDabkowski/pyjsparser</source>
-    <email></email>
-  </extension>
-</addon>
-
-<addon id="script.module.python.koding.aio.alt" name="Python Koding AIO Alternate" version="1.1" provider-name="Total Revolution">
-    <requires>
-        <import addon="xbmc.python" version="2.25.0"/>
-        <import addon="script.module.resolveurl" />
-        <import addon="script.module.requests" />
-        <import addon="script.module.beautifulsoup" />
-        <import addon="script.module.unidecode" />
-    </requires>
-    <extension point="xbmc.python.module" library="lib" />
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <summary lang="en">Python Koding All In One</summary>
-        <description lang="en">Python Koding AIO contains a bunch of time saving modules that allows for quick and simple development. This is an alterrnate fork that uses ResolveURL instead of URL Resolver.</description>
-        <disclaimer lang="en"/>
-        <language/>
-        <license>Creative Commons 4.0-NC-ND</license>
-        <forum>http://totalrevolution.tv/forum</forum>
-        <website>http://totalrevolution.tv</website>
-        <news>1.0 Stable release</news>
-        <source>https://github.com/totalrevolution/python-koding/tree/master/script.module.python.koding.aio</source>
-    </extension>
-</addon>
-
-<addon id="script.module.pytz" name="pytz" version="2014.2" provider-name="Stuart Bishop, Paul Backhouse">
-	<requires>
-		<import addon="xbmc.python" version="2.1.0"/>
-	</requires>
-	<extension point="xbmc.python.module" library="lib"/>
-	<extension point="xbmc.addon.metadata">
-	    <summary lang="en">World Timezone Definitions for Python.</summary>
-	    <description lang="en">pytz brings the Olson tz database into Python. This library allows accurate and cross platform timezone calculations using Python 2.4 or higher. It also solves the issue of ambiguous times at the end of daylight saving time, which you can read more about in the Python Library Reference (datetime.tzinfo).</description>
-	    <platform>all</platform>
-	    <language></language>
-	    <license>MIT</license>
-	    <forum></forum>
-	    <website>https://pypi.python.org/pypi/pytz/</website>
-	    <source>https://github.com/powlo/script.module.pytz</source>
-	    <email></email>
-	    <disclaimer lang="en">Use at your own risk. The authors accept no liability. May cause permanent and/or catastrophic damage. Side effects include, but are not limited to loss of memory, seizures, sudden fits of rage, sudden fits of melancholy, inability to recall prominent capital cities, lack of respect for authority, fear of cats, temporary and/or permanent black outs. Avoid inhalation. Use in a well ventilated space. Keep away from small children.</disclaimer>
-	</extension>
-</addon>
-
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.0.37a" provider-name="jsergio">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0" />
-        <import addon="plugin.video.youtube" optional="true" />
-        <import addon="script.module.python.twitch" optional="true" />
-        <import addon="script.module.cryptopy" version="1.2.6" optional="true" />
-        <import addon="plugin.video.gdrive" optional="true" />
-    </requires>
-    <extension point="xbmc.python.module" library="lib" />
-    <extension point="xbmc.python.pluginsource" library="lib/default.py" />
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <summary lang="en">Resolve common video host URL's to be playable in XBMC/Kodi.</summary>
-        <summary lang="es">Resolver enlaces a videos de sitios populares para poder reproducirlos en XBMC/Kodi.</summary>
-        <summary lang="hr">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju.</summary>
-        <summary lang="el">Επίλυση συνδέσμων κοινών εξυπηρετητών σε μορφή βίντεο ικανό για αναπαραγωγή στο XBMC/Kodi.</summary>
-        <description lang="en">Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>
-        <description lang="hr">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju, pojednostavnjuje razvoj priključaka za video dodatke koji zahtjevaju višestruke video izvore.</description>
-    </extension>
-</addon>
-
-<addon id="script.module.slproxy" name="SLProxy" version="0.0.5" provider-name="devilsport">
-  <requires>
-    <import addon="xbmc.python" version="2.24.0"/>
-    <import addon="script.module.requests"/>
-	  <import addon="script.module.streamlink.base" />  
-  </requires>
-  <extension point="xbmc.python.module" library="lib/"/>
-  <extension point="xbmc.addon.metadata">
-    <summary>StreamLink Proxy DS</summary>
-    <description>Streamlink proxy for Kodi</description>
-    <platform>all</platform>
-    <license>Simplified BSD</license>
-    <source></source>
-    <language>en</language>
-    <assets>
-      <icon>icon.png</icon>
-    </assets>
-    <news>
-    </news>
-  </extension>
-</addon>
-
-<addon id="script.module.streamlink.base" name="Streamlink Library" version="2018.06.12" provider-name="Streamlink Devs, Twilight0">
-  <requires>
-    <import addon="xbmc.python" version="2.24.0"/>
-    <import addon="script.module.requests" version="2.12.4"/>
-    <import addon="script.module.futures" version="2.2.0"/>
-    <import addon="script.module.streamlink.crypto" version="1.4.0"/>
-  </requires>
-  <extension point="xbmc.python.module" library="resources/lib/"/>
-  <extension point="xbmc.addon.metadata">
-    <summary>Streamlink Library</summary>
-    <description>Streamlink Library for Kodi</description>
-    <platform>all</platform>
-    <license>Simplified BSD</license>
-    <source>https://github.com/Twilight0/script.module.streamlink.base/</source>
-    <language>en</language>
-    <assets>
-      <icon>resources/icon.png</icon>
-    </assets>
-    <news>+ 2018.06.12
-- Plugins clean up and updates
-- Added issue template
-- Improved README</news>
-  </extension>
-</addon>
-
-<addon id="script.module.streamlink.crypto" name="Streamlink Crypto" version="1.5.2" provider-name="Twilight0">
-  <requires>
-    <import addon="xbmc.python" version="2.14.0"/>
-  </requires>
-  <extension point="xbmc.python.module" library="lib" />
-  <extension point="xbmc.addon.metadata">
-    <summary>Pure Python implementation of the cryptographic libraries required by Streamlink</summary>
-    <source>https://github.com/Twilight0/script.module.streamlink.crypto</source>
-    <platform>all</platform>
-    <license>MIT</license>
-  </extension>
-</addon>
-
-<addon id="script.module.universalscrapers" name="Universal Scrapers" version="1.2.1" provider-name="Team Universal">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-        <import addon="script.module.beautifulsoup" version="3.2.1"/>
-        <import addon="script.module.futures" version="2.2.0"/>
-        <import addon="script.module.requests"/>
-        <import addon="script.module.six"/>
-        <import addon="repository.universalscrapers"/>
-	<import addon="script.module.resolveurl" version="5.0.00" optional="true"/>
-
-                <!--<import addon="script.mrknow.urlresolver" version="2016.10.30.2" optional="true"/>-->
-    </requires>
-    <extension point="xbmc.python.module" library="lib"/>
-    <extension point="xbmc.python.pluginsource" library="lib/default.py">
-        <provides>executable</provides>
-    </extension>
-        <extension point="xbmc.addon.metadata">
-            <platform>all</platform>
-            <summary lang="en">Scrape common video host for URL's to be playable in XBMC/Kodi.</summary>
-            <description lang="en">Scrape common video host for URL's to be playable in XBMC/Kodi, simplifying addon development of video plugins requiring multi video hosts.
-            </description>
-            <license>GPL v3</license>
-            <source>https://</source>
-        </extension>
-</addon>
-
-<addon id="script.module.urlresolver" name="URLResolver (no indigo install)" version="5.0.53" provider-name="tvaddons">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0" />
-        <import addon="plugin.video.youtube" optional="true" />
-        <import addon="script.module.python.twitch" optional="true" />
-        <import addon="script.module.cryptopy" version="1.2.6" optional="true" />
-        <import addon="plugin.video.gdrive" optional="true" />
-    </requires>
-    <extension point="xbmc.python.module" library="lib" />
-    <extension point="xbmc.python.pluginsource" library="lib/default.py" />
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <summary lang="en">Resolve common video host URL's to be playable in XBMC/Kodi.</summary>
-        <summary lang="es">Resolver enlaces a videos de sitios populares para poder reproducirlos en XBMC/Kodi.</summary>
-        <summary lang="hr">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju.</summary>
-        <summary lang="el">Επίλυση συνδέσμων κοινών εξυπηρετητών σε μορφή βίντεο ικανό για αναπαραγωγή στο XBMC/Kodi.</summary>
-        <description lang="en">Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>
-        <description lang="hr">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju, pojednostavnjuje razvoj priključaka za video dodatke koji zahtjevaju višestruke video izvore.</description>
-        <forum>https://www.tvaddons.co/forums</forum>
-        <website>https://www.tvaddons.co</website>
-    </extension>
-</addon>
-
-<addon id="script.randomandlastitems" name="Random and Last items script" version="2.2.2" provider-name="MikeBZH44, Martijn, `Black">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-        <import addon="xbmc.json" version="6.0.0"/>
-        <import addon="script.module.simplejson" version="2.0.10"/>
-    </requires>
-    <extension point="xbmc.python.library" library="randomandlastitems.py" />
-    <extension point="xbmc.addon.metadata">
-        <summary lang="en">Random And Last Items script</summary>
-        <description lang="en">
-Script to get Random or Last added movies, episodes, albums or music videos from the database.
-Can optionnaly handle playlist to filter results.
-        </description>
-        <summary lang="fr">Random And Last Items script</summary>
-        <description lang="fr">
-Script qui retourne, soit de manière aléatoire, soit les derniers ajouts, les films, épisodes, albums ou clips de la base de données.
-Il peut optionnellement gerer les playlistes pour filtrer les resultats.
-        </description>
-        <platform>all</platform>
-        <website></website>
-        <source>https://github.com/XBMC-Addons/script.randomandlastitems</source>
-        <forum>http://forum.xbmc.org/showthread.php?tid=122448</forum>
-        <email></email>
-    </extension>
-</addon>
-
-<addon id="script.tvskipintro" version="2018.02.21" name="TV Skip Intro" provider-name="aenema">
-	<requires>
-		<import addon="xbmc.python" version="2.10.0" />
-	</requires>
-	<extension point="xbmc.python.pluginsource" library="main.py">
-		<provides>executable</provides>
-	</extension>
-	<extension point="xbmc.service" library="service.py" start="startup" />
-	<extension point="xbmc.addon.metadata">
-        <description>Prompt a Skip Intro dialog Netflix style. Skips intro for your favourite shows. The addon creates a database of your shows and stores a custom set skip value</description>
-	
-		<summary lang="en">Skip TV Shows Intro</summary>
-		<platform>all</platform>
-		<forum>-</forum>
-		<website>-</website>
-		<source>-</source>
-		<news>-</news>
-	</extension>
-</addon>
-
-<addon id="script.video.F4mProxy" name="F4mProxy" version="2.8.9" provider-name="Shani">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0" />
-        <import addon="script.module.requests" />
-    </requires>
-    <extension point="xbmc.python.module" library="lib" />
-    <extension point="xbmc.python.pluginsource" library="addon.py">
-        <provides>executable</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <summary lang="en">Proxy for f4m</summary>
-        <description lang="en">Use this addon to play F4m v1 and v2 streams</description>
-    </extension>
-</addon>
-
-<addon id="service.skin.widgets" name="Skin Widgets" version="0.0.33" provider-name="Martijn, phil65">
-    <requires>
-        <import addon="xbmc.json" version="6.0.0"/>
-        <import addon="xbmc.python" version="2.14.0"/>
-        <import addon="script.module.simplejson" version="2.0.10"/>
-    </requires>
-    <extension point="xbmc.service" library="default.py" start="login"/>
-    <extension point="xbmc.addon.metadata">
-        <summary lang="be">Skin widgets</summary>
-        <summary lang="da">Widgets til Skins</summary>
-        <summary lang="de">Skin Widgets</summary>
-        <summary lang="el">Widgets κελύφους</summary>
-        <summary lang="en">Skin widgets</summary>
-        <summary lang="es">Skin widgets</summary>
-        <summary lang="fr">Skin widgets</summary>
-        <summary lang="gl">Widgets do Tema</summary>
-        <summary lang="hr">Dodaci za presvlaku</summary>
-        <summary lang="hu">Kinézet miniprogram</summary>
-        <summary lang="it">Skin widgets</summary>
-        <summary lang="ko">스킨 위젯</summary>
-        <summary lang="nl">Skin widgets</summary>
-        <summary lang="pl">Dodatki Skóry</summary>
-        <summary lang="pt">Widgets para Temas</summary>
-        <summary lang="pt_BR">Skin widgets</summary>
-        <summary lang="sk">Widgety Vzhľadov</summary>
-        <summary lang="sv">Skal widgetar</summary>
-        <summary lang="zh">皮肤微件</summary>
-        <description lang="be">Skin widgets</description>
-        <description lang="da">Widgets til Skins</description>
-        <description lang="de">Skin Widgets</description>
-        <description lang="el">Widgets κελύφους</description>
-        <description lang="en">Skin widgets</description>
-        <description lang="es">Skin widgets</description>
-        <description lang="fr">Skin widgets</description>
-        <description lang="gl">Widgets do Tema</description>
-        <description lang="hr">Dodaci za presvlaku</description>
-        <description lang="hu">Kinézet miniprogram</description>
-        <description lang="it">Skin widgets</description>
-        <description lang="ko">스킨 위젯</description>
-        <description lang="nl">Skin widgets</description>
-        <description lang="pl">Dodatki Skóry</description>
-        <description lang="pt">Widgets para Temas</description>
-        <description lang="pt_BR">Skin widgets</description>
-        <description lang="sk">Widgety Vzhľadov</description>
-        <description lang="sv">Skal widgetar</description>
-        <description lang="zh">皮肤微件</description>
-        <disclaimer lang="be">For information visit the wiki page or XBMC forum.</disclaimer>
-        <disclaimer lang="de">Besuche für mehr Informationen die Wiki-Seite oder das XBMC-Forum</disclaimer>
-        <disclaimer lang="el">Για πληροφορίες επισκεφθείτε τη σελίδα wiki ή το forum του XBMC.</disclaimer>
-        <disclaimer lang="en">For information visit the wiki page or XBMC forum.</disclaimer>
-        <disclaimer lang="es">Para más información, visite el wiki o los foros de XBMC.</disclaimer>
-        <disclaimer lang="fr">Pour plus d'information, visitez la page du Wiki ou dur forum XBMC.</disclaimer>
-        <disclaimer lang="gl">Para máis información visite a páxina wiki ou o foro do XBMC.</disclaimer>
-        <disclaimer lang="hr">Za više informacija posjetite wiki stranicu ili XBMC forum.</disclaimer>
-        <disclaimer lang="it">Per le informazioni visita la pagina wiki o il forum</disclaimer>
-        <disclaimer lang="ko">위키 페이지나 XBMC 포럼에서 추가 정보를 확인하세요.</disclaimer>
-        <disclaimer lang="nl">Bezoek voor informatie de wiki pagina of het XBMC forum.</disclaimer>
-        <disclaimer lang="pl">Odwiedź stronę wiki lub forum XBMC by znaleźć więcej informacji.</disclaimer>
-        <disclaimer lang="pt">Para mais informação, visite a página wiki ou o fórum do XBMC.</disclaimer>
-        <disclaimer lang="pt_BR">Para informações visite o página do wiki ou fórum XBMC.org.</disclaimer>
-        <disclaimer lang="sv">För information, besök wiki-sidan eller XBMC forumet.</disclaimer>
-        <disclaimer lang="zh">访问wiki页或XBMC论坛了解更多信息</disclaimer>
-        <platform>all</platform>
-        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-        <website></website>
-        <forum>http://forum.xbmc.org/showthread.php?tid=142389</forum>
-        <source>https://github.com/XBMC-Addons/service.skin.widgets</source>
-        <email></email>
-    </extension>
-</addon>
-
-<addon
-  id="skin.xonfluence"
-  version="4.0.10"
-  name="Xonfluence"
-  provider-name="Helly">
-  <requires>
-    <import addon="xbmc.gui" version="5.14.0"/>
-	  <import addon="script.favourites" version="7.1.1"/>
-	  <import addon="service.skin.widgets" version="0.0.33"/>
-	  <import addon="service.library.data.provider" version="0.3.2"/>
-	  <import addon="script.randomandlastitems" version="2.2.2"/>
-  </requires>
-  <extension
-    point="xbmc.gui.skin"
-    debugging="false"
-    effectslowdown="1.0">
-    <res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">eXtended MOD of Confluence skin originally by Jezz_X and CCM by Mudislander.</summary>
-    <summary lang="en_US">eXtended MOD of Confluence skin originally by Jezz_X and CCM by Mudislander.</summary>
-    <summary lang="nl">Uitgebreide MOD van Confluence skin origineel door Jezz_X en CCM door Mudislander.</summary>
-    <description lang="en">Xonfluence is a MOD of Confluence to enable a greater degree of user customisation to the default skin (based by Mudislander's CCM).</description>
-    <description lang="en_US">Xonfluence is a MOD of Confluence to enable a greater degree of user customisation to the default skin (based by Mudislander's CCM).</description>
-    <description lang="nl">Xonfluence is een MOD van Confluence om een grotere aanpassingsmogelijkheid te geven ten opzichten van de standaard skin (gebaseerd op Mudislander's CCM).</description>
-    <disclaimer lang="en">You break it - You get to keep the pieces</disclaimer>
-    <disclaimer lang="en_US">You break it - You get to keep the pieces</disclaimer>
-    <disclaimer lang="nl">Wie zijn billen brandt - moet op de blaren zitten</disclaimer>
-    <platform>all</platform>
-	  <license>GNU General Public License version 2</license>
-	  <forum>https://forum.kodi.tv/showthread.php?tid=315391</forum>
-	  <website></website>
-	  <email></email>
-	  <source>https://github.com/Helly1206/skin.xonfluence</source>
-    <assets>
-      <icon>resources/icon.png</icon>
-      <fanart>resources/fanart.jpg</fanart>
-	    <screenshot>resources/screenshot-01.jpg</screenshot>
-	    <screenshot>resources/screenshot-02.jpg</screenshot>
-	    <screenshot>resources/screenshot-03.jpg</screenshot>
-	    <screenshot>resources/screenshot-04.jpg</screenshot>
-	    <screenshot>resources/screenshot-05.jpg</screenshot>
-	    <screenshot>resources/screenshot-06.jpg</screenshot>
-	    <screenshot>resources/screenshot-07.jpg</screenshot>
-	    <screenshot>resources/screenshot-08.jpg</screenshot>
-	    <screenshot>resources/screenshot-09.jpg</screenshot>
-    </assets>
-    <news>See changelog for latest changes</news>
-  </extension>
 </addon>
 </addons>
