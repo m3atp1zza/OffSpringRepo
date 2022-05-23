@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="repository.offspring"
-       name="[COLORgoldOffSpring Repo[/COLOR]"
-       version="22.5.18"
-       provider-name="[COLORgoldOffSpring[/COLOR]">
+       name="[COLORgold]offspring repo[/COLOR]"
+       version="22.5.23"
+       provider-name="[COLORgold]OffSpring[/COLOR]">
     <extension point="xbmc.addon.repository" name="OffSpring Repo">
         <dir minversion="18.0" maxversion="18.9.0"><!--OffSpringRepo LEIA-->
             <info compressed="false">https://raw.githubusercontent.com/m3atp1zza/OffSpringRepo/main/leia/zips/addons.xml</info>
@@ -56,8 +56,8 @@
         </dir>
     </extension>
     <extension point="xbmc.addon.metadata">
-        <summary>[COLORyellowgreen]OffSpring Repo[/COLOR]</summary>
-        <description>[COLORyellowgreen]OffSpring Repo[/COLOR]</description>
+        <summary>[COLORgold]OffSpring Repo[/COLOR]</summary>
+        <description>[COLORgold]OffSpring Repo[/COLOR]</description>
         <platform>all</platform>
     <assets>
         <icon>icon.png</icon>
