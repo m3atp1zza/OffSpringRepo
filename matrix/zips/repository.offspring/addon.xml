@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="repository.offspring"
-       name="[COLORyellow]offspring repo[/COLOR]"
-       version="21.8.4"
-       provider-name="[COLORyellow]OffSpring[/COLOR]">
+       name="[COLORgold]offspring repo[/COLOR]"
+       version="22.5.26"
+       provider-name="[COLORgold]OffSpring[/COLOR]">
     <extension point="xbmc.addon.repository" name="OffSpring Repo">
         <dir minversion="18.0" maxversion="18.9.0"><!--OffSpringRepo LEIA-->
             <info compressed="false">https://raw.githubusercontent.com/m3atp1zza/OffSpringRepo/main/leia/zips/addons.xml</info>
@@ -13,16 +13,6 @@
             <info compressed="false">https://raw.githubusercontent.com/m3atp1zza/OffSpringRepo/main/matrix/zips/addons.xml</info>
             <checksum>https://raw.githubusercontent.com/m3atp1zza/OffSpringRepo/main/matrix/zips/addons.xml.md5</checksum>
             <datadir zip="true">https://raw.githubusercontent.com/m3atp1zza/OffSpringRepo/main/matrix/zips/</datadir>
-        </dir>
-        <dir minversion="18.0" maxversion="18.9.0"><!--LoonaticsAsylum LEIA-->
-            <info compressed="false">https://raw.githubusercontent.com/techecoyote/LooNaticsAsylum/master/leia/zips/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/techecoyote/LooNaticsAsylum/master/leia/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/techecoyote/LooNaticsAsylum/master/leia/zips/</datadir>
-        </dir>
-        <dir minversion="18.9.0"><!--LoonaticsAsylum MATRIX-->
-            <info compressed="false">https://raw.githubusercontent.com/techecoyote/LooNaticsAsylum/master/matrix/zips/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/techecoyote/LooNaticsAsylum/master/matrix/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/techecoyote/LooNaticsAsylum/master/matrix/zips/</datadir>
         </dir>
         <dir><!--OpenScrapers-->
             <info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml</info>
@@ -56,8 +46,8 @@
         </dir>
     </extension>
     <extension point="xbmc.addon.metadata">
-        <summary>[COLORyellowgreen]OffSpring Repo[/COLOR]</summary>
-        <description>[COLORyellowgreen]OffSpring Repo[/COLOR]</description>
+        <summary>[COLORgold]OffSpring Repo[/COLOR]</summary>
+        <description>[COLORgold]OffSpring Repo[/COLOR]</description>
         <platform>all</platform>
     <assets>
         <icon>icon.png</icon>
