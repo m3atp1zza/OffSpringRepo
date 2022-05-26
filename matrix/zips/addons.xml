@@ -1,5 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
+<addon id="context.insomnia" name="[COLORyellowgreen]INSOMNIA Context[/COLOR]" provider-name="[COLORyellowgreen]INSOMNIA[/COLOR]" version="0.0.1">
+    <requires>
+        <import addon="script.module.requests" version="2.19.1" />
+    </requires>
+    <extension point="kodi.context.item">
+        <menu id="kodi.core.main">
+            <item library="contextSettings.py">
+                <label>[B][COLOR yellowgreen]INSOMNIA[/COLOR][/B] - CM Settings</label>
+                <visible>
+                    !String.IsEmpty(Window(home).Property(context.insomnia.settings)) +
+                    String.StartsWith(ListItem.path,plugin://plugin.video.insomnia/) +
+                    String.IsEqual(ListItem.Property(isINSOMNIA_widget),true)
+                </visible>
+            </item>
+            <item library="traktManager.py">
+                <label>[B][COLOR yellowgreen]INSOMNIA[/COLOR][/B] - Trakt Manager</label>
+                <visible>
+                    !String.IsEmpty(Window(home).Property(context.insomnia.traktManager)) +
+                    String.StartsWith(ListItem.path,plugin://plugin.video.insomnia/) +
+                    String.IsEqual(ListItem.Property(isINSOMNIA_widget),true) +
+                    [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,movie)]
+                </visible>
+            </item>
+            <item library="clearProviders.py">
+                <label>[B][COLOR yellowgreen]INSOMNIA[/COLOR][/B] - Clear Providers</label>
+                <visible>
+                    [!String.IsEmpty(Window(home).Property(context.insomnia.clearProviders)) +
+                    String.StartsWith(ListItem.FolderPath,plugin://plugin.video.insomnia/?action=play) +
+                    String.IsEqual(ListItem.Property(isINSOMNIA_widget),true) +
+                    [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]] |
+                    [String.Contains(Container.FolderPath,videodb://) +
+                    [String.Contains(Container.ListItem.Path,Window(home).Property(le.movieLib.path)) | String.Contains(Container.ListItem.Path,Window(home).Property(le.tvLib.path))] +
+                    [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]]
+                </visible>
+            </item>
+            <item library="clearBookmark.py">
+                <label>[B][COLOR yellowgreen]INSOMNIA[/COLOR][/B] - Clear Item Bookmark</label>
+                <visible>
+                    !String.IsEmpty(Window(home).Property(context.insomnia.clearBookmark)) +
+                    String.StartsWith(ListItem.FolderPath,plugin://plugin.video.insomnia/?action=play) +
+                    String.IsEqual(ListItem.Property(isINSOMNIA_widget),true) +
+                    ListItem.IsResumable +
+                    [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
+                </visible>
+            </item>
+            <item library="rescrape.py">
+                <label>[B][COLOR yellowgreen]INSOMNIA[/COLOR][/B] - Rescrape Item</label>
+                <visible>
+                    [!String.IsEmpty(Window(home).Property(context.insomnia.rescrape)) +
+                    String.StartsWith(ListItem.FolderPath,plugin://plugin.video.insomnia/?action=play) +
+                    String.IsEqual(ListItem.Property(isINSOMNIA_widget),true) +
+                    [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]]
+                </visible>
+            </item>
+            <item library="libRescrape.py">
+                <label>[B][COLOR yellowgreen]INSOMNIA[/COLOR][/B] - Rescrape Lib Item</label>
+                <visible>
+                    String.Contains(Container.FolderPath,videodb://) +
+                    [String.Contains(Container.ListItem.Path,Window(home).Property(le.movieLib.path)) | String.Contains(Container.ListItem.Path,Window(home).Property(le.tvLib.path))] +
+                    [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
+                </visible>
+            </item>
+            <item library="playFromHere.py">
+                <label>[B][COLOR yellowgreen]INSOMNIA[/COLOR][/B] - Play from here</label>
+                <visible>
+                    !String.IsEmpty(Window(home).Property(context.insomnia.playFromHere)) +
+                    String.StartsWith(ListItem.path,plugin://plugin.video.insomnia/) +
+                    String.IsEqual(ListItem.Property(isINSOMNIA_widget),true) +
+                    String.IsEqual(ListItem.dbtype,episode)
+                </visible>
+            </item>
+            <item library="autoPlay.py">
+                <label>[B][COLOR yellowgreen]INSOMNIA[/COLOR][/B] - Auto Play</label>
+                <visible>
+                    String.IsEmpty(Window(home).Property(le.autoPlay.enabled)) +
+                    !String.IsEmpty(Window(home).Property(context.insomnia.autoPlay)) +
+                    String.StartsWith(ListItem.FolderPath,plugin://plugin.video.insomnia/?action=play) +
+                    String.IsEqual(ListItem.Property(isINSOMNIA_widget),true) +
+                    [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
+                </visible>
+            </item>
+            <item library="sourceSelect.py">
+                <label>[B][COLOR yellowgreen]INSOMNIA[/COLOR][/B] - Source Select</label>
+                <visible>
+                    !String.IsEmpty(Window(home).Property(le.autoPlay.enabled)) +
+                    !String.IsEmpty(Window(home).Property(context.insomnia.sourceSelect)) +
+                    String.StartsWith(ListItem.FolderPath,plugin://plugin.video.insomnia/?action=play) +
+                    String.IsEqual(ListItem.Property(isINSOMNIA_widget),true) +
+                    [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
+                </visible>
+            </item>
+            <item library="findSimilar.py">
+                <label>[B][COLOR yellowgreen]INSOMNIA[/COLOR][/B] - Find Similar</label>
+                <visible>
+                    !String.IsEmpty(Window(home).Property(context.insomnia.findSimilar)) +
+                    String.StartsWith(ListItem.path,plugin://plugin.video.insomnia/) +
+                    String.IsEqual(ListItem.Property(isINSOMNIA_widget),true) +
+                    [String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
+                </visible>
+            </item>
+            <item library="browseSeries.py">
+                <label>[B][COLOR yellowgreen]INSOMNIA[/COLOR][/B] - Browse Series</label>
+                <visible>
+                    !String.IsEmpty(Window(home).Property(context.insomnia.browseSeries)) +
+                    String.StartsWith(ListItem.path,plugin://plugin.video.insomnia/) +
+                    String.IsEqual(ListItem.Property(isINSOMNIA_widget),true) +
+                    [String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow)]
+                </visible>
+            </item>
+            <item library="browseEpisodes.py">
+                <label>[B][COLOR yellowgreen]INSOMNIA[/COLOR][/B] - Browse Episodes</label>
+                <visible>
+                    !String.IsEmpty(Window(home).Property(context.insomnia.browseEpisodes)) +
+                    String.StartsWith(ListItem.path,plugin://plugin.video.insomnia/) +
+                    String.IsEqual(ListItem.Property(isINSOMNIA_widget),true) +
+                    String.IsEqual(ListItem.dbtype,episode)
+                </visible>
+            </item>
+        </menu>
+    </extension>
+    <extension point="xbmc.service" library="service.py" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">[COLOR yellowgreen]INSOMNIA Context[/COLOR] - We do not host any of the contents streamed.</summary>
+        <description lang="en">[COLOR yellowgreen]INSOMNIA Context[/COLOR][CR] This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.[CR]The author does not host any of the content in this addon and takes no responsibility for content found.</description>
+		<disclaimer lang="en">The author of this addon does not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <forum></forum>
+        <website></website>
+        <source></source>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+            <screenshot></screenshot>
+        </assets>
+        <news></news>
+    </extension>
+</addon>
+
 <addon id="plugin.program.super.favourites" name="Super Favourites" version="1.0.43" provider-name="spoyser">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
