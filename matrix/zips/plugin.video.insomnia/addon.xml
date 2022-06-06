@@ -1,4 +1,4 @@
-<addon id="plugin.video.insomnia" name="[COLOR orange]INSOMNIA[/COLOR]" provider-name="INSOMNIA" version="22.5.4">
+<addon id="plugin.video.insomnia" name="[COLOR orange]INSOMNIA[/COLOR]" provider-name="INSOMNIA" version="22.6.6">
     <requires>
         <import addon="context.insomnia" />
         <import addon="script.module.youraccounts" />
