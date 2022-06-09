@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="context.insomnia" name="[COLORorange]INSOMNIA Context[/COLOR]" provider-name="[COLORorange]INSOMNIA[/COLOR]" version="0.0.1">
+<addon id="context.insomnia" name="[COLORyellowgreen]INSOMNIA Context[/COLOR]" provider-name="[COLORyellowgreen]INSOMNIA[/COLOR]" version="0.0.1">
     <requires>
         <import addon="script.module.requests" version="2.19.1" />
     </requires>
     <extension point="kodi.context.item">
         <menu id="kodi.core.main">
             <item library="contextSettings.py">
-                <label>[B][COLOR orange]INSOMNIA[/COLOR][/B] - CM Settings</label>
+                <label>[B][COLOR yellowgreen]INSOMNIA[/COLOR][/B] - CM Settings</label>
                 <visible>
                     !String.IsEmpty(Window(home).Property(context.insomnia.settings)) +
                     String.StartsWith(ListItem.path,plugin://plugin.video.insomnia/) +
@@ -14,7 +14,7 @@
                 </visible>
             </item>
             <item library="traktManager.py">
-                <label>[B][COLOR orange]INSOMNIA[/COLOR][/B] - Trakt Manager</label>
+                <label>[B][COLOR yellowgreen]INSOMNIA[/COLOR][/B] - Trakt Manager</label>
                 <visible>
                     !String.IsEmpty(Window(home).Property(context.insomnia.traktManager)) +
                     String.StartsWith(ListItem.path,plugin://plugin.video.insomnia/) +
@@ -23,7 +23,7 @@
                 </visible>
             </item>
             <item library="clearProviders.py">
-                <label>[B][COLOR orange]INSOMNIA[/COLOR][/B] - Clear Providers</label>
+                <label>[B][COLOR yellowgreen]INSOMNIA[/COLOR][/B] - Clear Providers</label>
                 <visible>
                     [!String.IsEmpty(Window(home).Property(context.insomnia.clearProviders)) +
                     String.StartsWith(ListItem.FolderPath,plugin://plugin.video.insomnia/?action=play) +
@@ -35,7 +35,7 @@
                 </visible>
             </item>
             <item library="clearBookmark.py">
-                <label>[B][COLOR orange]INSOMNIA[/COLOR][/B] - Clear Item Bookmark</label>
+                <label>[B][COLOR yellowgreen]INSOMNIA[/COLOR][/B] - Clear Item Bookmark</label>
                 <visible>
                     !String.IsEmpty(Window(home).Property(context.insomnia.clearBookmark)) +
                     String.StartsWith(ListItem.FolderPath,plugin://plugin.video.insomnia/?action=play) +
@@ -45,7 +45,7 @@
                 </visible>
             </item>
             <item library="rescrape.py">
-                <label>[B][COLOR orange]INSOMNIA[/COLOR][/B] - Rescrape Item</label>
+                <label>[B][COLOR yellowgreen]INSOMNIA[/COLOR][/B] - Rescrape Item</label>
                 <visible>
                     [!String.IsEmpty(Window(home).Property(context.insomnia.rescrape)) +
                     String.StartsWith(ListItem.FolderPath,plugin://plugin.video.insomnia/?action=play) +
@@ -54,7 +54,7 @@
                 </visible>
             </item>
             <item library="libRescrape.py">
-                <label>[B][COLOR orange]INSOMNIA[/COLOR][/B] - Rescrape Lib Item</label>
+                <label>[B][COLOR yellowgreen]INSOMNIA[/COLOR][/B] - Rescrape Lib Item</label>
                 <visible>
                     String.Contains(Container.FolderPath,videodb://) +
                     [String.Contains(Container.ListItem.Path,Window(home).Property(le.movieLib.path)) | String.Contains(Container.ListItem.Path,Window(home).Property(le.tvLib.path))] +
@@ -62,7 +62,7 @@
                 </visible>
             </item>
             <item library="playFromHere.py">
-                <label>[B][COLOR orange]INSOMNIA[/COLOR][/B] - Play from here</label>
+                <label>[B][COLOR yellowgreen]INSOMNIA[/COLOR][/B] - Play from here</label>
                 <visible>
                     !String.IsEmpty(Window(home).Property(context.insomnia.playFromHere)) +
                     String.StartsWith(ListItem.path,plugin://plugin.video.insomnia/) +
@@ -71,7 +71,7 @@
                 </visible>
             </item>
             <item library="autoPlay.py">
-                <label>[B][COLOR orange]INSOMNIA[/COLOR][/B] - Auto Play</label>
+                <label>[B][COLOR yellowgreen]INSOMNIA[/COLOR][/B] - Auto Play</label>
                 <visible>
                     String.IsEmpty(Window(home).Property(le.autoPlay.enabled)) +
                     !String.IsEmpty(Window(home).Property(context.insomnia.autoPlay)) +
@@ -81,7 +81,7 @@
                 </visible>
             </item>
             <item library="sourceSelect.py">
-                <label>[B][COLOR orange]INSOMNIA[/COLOR][/B] - Source Select</label>
+                <label>[B][COLOR yellowgreen]INSOMNIA[/COLOR][/B] - Source Select</label>
                 <visible>
                     !String.IsEmpty(Window(home).Property(le.autoPlay.enabled)) +
                     !String.IsEmpty(Window(home).Property(context.insomnia.sourceSelect)) +
@@ -91,7 +91,7 @@
                 </visible>
             </item>
             <item library="findSimilar.py">
-                <label>[B][COLOR orange]INSOMNIA[/COLOR][/B] - Find Similar</label>
+                <label>[B][COLOR yellowgreen]INSOMNIA[/COLOR][/B] - Find Similar</label>
                 <visible>
                     !String.IsEmpty(Window(home).Property(context.insomnia.findSimilar)) +
                     String.StartsWith(ListItem.path,plugin://plugin.video.insomnia/) +
@@ -100,7 +100,7 @@
                 </visible>
             </item>
             <item library="browseSeries.py">
-                <label>[B][COLOR orange]INSOMNIA[/COLOR][/B] - Browse Series</label>
+                <label>[B][COLOR yellowgreen]INSOMNIA[/COLOR][/B] - Browse Series</label>
                 <visible>
                     !String.IsEmpty(Window(home).Property(context.insomnia.browseSeries)) +
                     String.StartsWith(ListItem.path,plugin://plugin.video.insomnia/) +
@@ -109,7 +109,7 @@
                 </visible>
             </item>
             <item library="browseEpisodes.py">
-                <label>[B][COLOR orange]INSOMNIA[/COLOR][/B] - Browse Episodes</label>
+                <label>[B][COLOR yellowgreen]INSOMNIA[/COLOR][/B] - Browse Episodes</label>
                 <visible>
                     !String.IsEmpty(Window(home).Property(context.insomnia.browseEpisodes)) +
                     String.StartsWith(ListItem.path,plugin://plugin.video.insomnia/) +
@@ -121,8 +121,8 @@
     </extension>
     <extension point="xbmc.service" library="service.py" />
     <extension point="xbmc.addon.metadata">
-        <summary lang="en">[COLOR orange]INSOMNIA Context[/COLOR] - We do not host any of the contents streamed.</summary>
-        <description lang="en">[COLOR orange]INSOMNIA Context[/COLOR][CR] This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.[CR]The author does not host any of the content in this addon and takes no responsibility for content found.</description>
+        <summary lang="en">[COLOR yellowgreen]INSOMNIA Context[/COLOR] - We do not host any of the contents streamed.</summary>
+        <description lang="en">[COLOR yellowgreen]INSOMNIA Context[/COLOR][CR] This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.[CR]The author does not host any of the content in this addon and takes no responsibility for content found.</description>
 		<disclaimer lang="en">The author of this addon does not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
         <platform>all</platform>
         <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
