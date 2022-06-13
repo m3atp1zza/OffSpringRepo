@@ -1,0 +1,5 @@
+
+If you changed account information in the [B]"Your Accounts"[/B] addon outside of INSOMNIA you need to
+sync the new account information back to INSOMNIA with the [B]"sync(re) with Your Accounts"[/B] option.
+If you made changed via the [B]"Open Your Accounts Addon"[/B] here in INSOMNIA's settings, or INSOMNIA's
+UI, then this process is done for you.  A visible notification will alert you of the auto sync process.

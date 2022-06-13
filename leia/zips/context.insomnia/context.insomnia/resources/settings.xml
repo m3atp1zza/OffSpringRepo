@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings>
+    <category label="30000">
+        <setting type="lsep" label="30002" />
+        <setting label="30012" type="bool" id="context.insomnia.settings" default="true"/>
+        <setting label="30003" type="bool" id="context.insomnia.traktManager" default="true"/>
+        <setting label="30004" type="bool" id="context.insomnia.clearProviders" default="true"/>
+        <setting label="30013" type="bool" id="context.insomnia.clearBookmark" default="true"/>
+        <setting label="30005" type="bool" id="context.insomnia.rescrape" default="true"/>
+        <setting label="30006" type="bool" id="context.insomnia.playFromHere" default="true"/>
+        <setting label="30007" type="bool" id="context.insomnia.autoPlay" default="true"/>
+        <setting label="30008" type="bool" id="context.insomnia.sourceSelect" default="true"/>
+        <setting label="30009" type="bool" id="context.insomnia.findSimilar" default="true"/>
+        <setting label="30010" type="bool" id="context.insomnia.browseSeries" default="true"/>
+        <setting label="30011" type="bool" id="context.insomnia.browseEpisodes" default="true"/>
+    </category>
+
+    <category label="30014">
+        <setting label="30015" type="bool" id="checkAddonUpdates"  default="false" />
+    </category>
+
+</settings>
