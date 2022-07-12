@@ -1,0 +1,355 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "addon.xml",
+			"settings":
+			{
+				"buffer_size": 1451,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			},
+			"undo_stack":
+			[
+				[
+					1,
+					1,
+					"paste",
+					{
+						"event":
+						{
+							"modifier_keys":
+							{
+							},
+							"x": 166.9,
+							"y": 61.3
+						}
+					},
+					"AQAAAAAAAAAAAAAAqwUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 362.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Program Files/Kodi19+/portable_data/addons/skin.arctic.horizon.2/addon.xml",
+		"/C/Program Files/Kodi19+/portable_data/userdata/Database/Textures13.db",
+		"/C/Program Files/Kodi19+/portable_data/userdata/Database/Addons33.db",
+		"/C/Users/trade/OneDrive/Desktop/matrix/context.insomnia/context.insomnia-0.0.1.zip",
+		"/C/Program Files/Kodi19/portable_data/addons/plugin.video.insomnia/addon.xml",
+		"/C/Program Files/Kodi19/portable_data/addons/plugin.video.insomnia/resources/lib/menus/insomnialist.py",
+		"/C/Program Files/Kodi19/portable_data/addons/plugin.video.insomnia/resources/lib/menus/movies.py",
+		"/C/Program Files/Kodi19/portable_data/addons/plugin.video.insomnia/resources/lib/menus/navigator.py",
+		"/C/Program Files/Kodi19/portable_data/addons/skin.arctic.horizon.2/1080i/Background.xml",
+		"/C/Program Files/Kodi19/portable_data/addons/skin.arctic.horizon.2/1080i/Home.xml",
+		"/C/Program Files/Kodi19/portable_data/addons/skin.arctic.horizon.2/1080i/Images.xml",
+		"/C/Program Files/Kodi19/portable_data/addons/skin.arctic.horizon.2/1080i/Includes.xml",
+		"/C/Program Files/Kodi19/portable_data/addons/skin.arctic.horizon.2/1080i/Labels.xml",
+		"/C/Program Files/Kodi19/portable_data/addons/skin.arctic.horizon.2/1080i/Info.xml",
+		"/C/Program Files/Kodi19/portable_data/addons/skin.arctic.horizon.2/1080i/Views.xml",
+		"/C/Program Files/Kodi19/portable_data/addons/skin.arctic.horizon.2/1080i/Startup.xml",
+		"/C/Program Files/Kodi19/portable_data/addons/skin.arctic.horizon.2/1080i/SettingsProfile.xml",
+		"/C/Program Files/Kodi19/portable_data/addons/skin.arctic.horizon.2/Readme.md",
+		"/C/Program Files/Kodi19/portable_data/userdata/addon_data/skin.arctic.horizon.2/settings.xml",
+		"/C/Program Files/Kodi19/portable_data/kodi_stacktrace-19.1 Git_20210508-85e05228b4-20220617-153139.txt",
+		"/C/Program Files/Kodi18/portable_data/addons/plugin.video.asgard/resources/sources/api.pyo",
+		"/C/Program Files/Kodi18/portable_data/addons/plugin.video.asgard/resources/lib/player.py",
+		"/C/Program Files/Kodi18/portable_data/addons/context.lu.trailer/addon.xml",
+		"/C/Users/trade/GitHub/OffSpringRepo/text/horrorrd.xml",
+		"/C/Users/trade/OneDrive/Desktop/WareHouse-19.4-64bit.zip",
+		"/C/Users/trade/OneDrive/Desktop/TheWareHouseTMDB-Players.zip",
+		"/C/Users/trade/OneDrive/Desktop/direct.insomnia.json",
+		"/C/Program Files/Kodi18/portable_data/userdata/addon_data/plugin.video.themoviedb.helper/players/direct.theoath.json",
+		"/C/Users/trade/OneDrive/Desktop/a4k-openproject-json.openplayers-307e96c/venom.select.json",
+		"/C/Users/trade/OneDrive/Desktop/a4k-openproject-json.openplayers-307e96c/insomnia.select.json",
+		"/C/Users/trade/OneDrive/Desktop/a4k-openproject-json.openplayers-307e96c/direct.yoda.json",
+		"/C/Program Files/Kodi19/portable_data/addons/skin.arctic.horizon.2/1080i/Font.xml",
+		"/C/Program Files/Kodi19/portable_data/addons/skin.arctic.horizon.2/colors/Dark.xml",
+		"/C/Users/trade/OneDrive/Desktop/leia/plugin.video.insomnia/addon.xml",
+		"/C/Users/trade/GitHub/OffSpringRepo/matrix/zips/plugin.video.insomnia/addon.xml",
+		"/C/Users/trade/OneDrive/Desktop/leia/plugin.video.insomnia/resources/lib/menus/insomnialist.py",
+		"/C/Users/trade/OneDrive/Desktop/leia/plugin.video.insomnia/resources/lib/menus/navigator.py",
+		"/C/Users/trade/OneDrive/Desktop/matrix/plugin.video.insomnia/addon.xml",
+		"/C/Users/trade/GitHub/OffSpringRepo/.gitattributes",
+		"/C/Users/trade/GitHub/OffSpringRepo/leia/zips/plugin.video.insomnia/addon.xml",
+		"/C/Users/trade/GitHub/OffSpringRepo/leia/zips/context.insomnia/addon.xml",
+		"/C/Users/trade/GitHub/OffSpringRepo/leia/zips/addons.xml.md5",
+		"/C/Users/trade/GitHub/OffSpringRepo/matrix/zips/addons.xml.md5",
+		"/C/Users/trade/OneDrive/Desktop/WareHouse-19.4-64bit.apk",
+		"/C/Users/trade/OneDrive/Desktop/matrix/plugin.video.insomnia/resources/lib/menus/navigator.py",
+		"/C/Users/trade/OneDrive/Desktop/matrix/plugin.video.insomnia/resources/lib/menus/insomnialist.py",
+		"/C/Users/trade/GitHub/OffSpringRepo/leia/zips/addons.xml",
+		"/C/Program Files/Kodi18/portable_data/addons/plugin.video.insomnia/resources/lib/menus/navigator.py",
+		"/C/Program Files/Kodi18/portable_data/addons/plugin.video.insomnia/resources/lib/menus/movies.py",
+		"/C/Program Files/Kodi18/portable_data/addons/plugin.video.insomnia/resources/lib/menus/insomnialist.py",
+		"/C/Program Files/Kodi18/portable_data/addons/plugin.video.insomnia/addon.xml",
+		"/C/Users/trade/OneDrive/Desktop/leia/repository.offspring/addon.xml",
+		"/C/Users/trade/OneDrive/Desktop/matrix/repository.offspring/addon.xml",
+		"/C/Users/trade/GitHub/OffSpringRepo/matrix/zips/addons.xml",
+		"/C/Users/trade/GitHub/OffSpringRepo/text/oneclicks.xml",
+		"/C/Users/trade/GitHub/Install_OffSpring/OffSpringRepo/text/horrorrd.xml",
+		"/C/Users/trade/OneDrive/Desktop/addon.xml",
+		"/C/Users/trade/GitHub/OffSpringRepo/leia/zips/repository.offspring/addon.xml",
+		"/C/Program Files/Kodi18/portable_data/addons/repository.offspring/addon.xml",
+		"/C/Users/trade/Downloads/Telegram Desktop/addons (3).md5",
+		"/C/Users/trade/OneDrive/Desktop/addons (3).md5",
+		"/C/Users/trade/Downloads/Telegram Desktop/addons (6).xml",
+		"/C/Users/trade/Downloads/Telegram Desktop/addons (5).xml",
+		"/C/Users/trade/GitHub/OffSpringRepo/leia/zips/addons.md5",
+		"/C/Users/trade/GitHub/OffSpringRepo/leia/zips/addons.xml.md5.md5",
+		"/C/Users/trade/GitHub/OffSpringRepo/matrix/zips/addons.xml.md5.md5",
+		"/C/Users/trade/GitHub/OffSpringRepo/matrix/zips/repository.offspring/addon.xml",
+		"/C/Users/trade/GitHub/OffSpringRepo/matrix/zips/addons.md5",
+		"/C/Users/trade/Downloads/Telegram Desktop/addons.md5",
+		"/C/Users/trade/Downloads/Telegram Desktop/addons (2).md5",
+		"/C/Users/trade/OneDrive/Desktop/plugin.video.insomnia/addon.xml",
+		"/C/Users/trade/GitHub/Install_OffSpring/Install_OffSpring/addon.xml",
+		"/C/Program Files/Kodi18/portable_data/addons/plugin.video.insomnia/insomnia.py",
+		"/C/Users/trade/GitHub/Install_OffSpring/repository.offspring/addon.xml",
+		"/C/Users/trade/GitHub/Install_OffSpring/addon.xml",
+		"/C/Users/trade/OneDrive/Desktop/repository.offspring/addon.xml",
+		"/C/Users/trade/AppData/Local/Temp/Rar$DIa8456.22809/addon.xml",
+		"/C/Users/trade/AppData/Local/Temp/Rar$DIa10604.4743/addon.xml",
+		"/C/Users/trade/GitHub/OffSpringRepo/matrix/zips/plugin.video.insomnia/insomnia.py",
+		"/C/Users/trade/OneDrive/Desktop/repository.thewarehouse/addon.xml",
+		"/C/Users/trade/OneDrive/Desktop/context.insomnia/addon.xml",
+		"/C/Users/trade/AppData/Local/Temp/Rar$DIa5696.24110/addon.xml",
+		"/C/Users/trade/.gitconfig",
+		"/C/Users/trade/GitHub/Install_OffSpring/.gitattributes",
+		"/C/Users/trade/OneDrive/Desktop/plugin.video.insomnia/resources/lib/menus/navigator.py",
+		"/C/Users/trade/OneDrive/Desktop/plugin.video.insomnia/resources/lib/menus/movies.py",
+		"/C/Users/trade/OneDrive/Desktop/plugin.video.insomnia/resources/lib/menus/tvshows.py",
+		"/C/Users/trade/OneDrive/Desktop/script.module.myaccounts/addon.xml",
+		"/C/Program Files/Kodi18/portable_data/userdata/addon_data/script.module.myaccounts/settings.xml",
+		"/C/Program Files/Kodi18/portable_data/addons/script.module.myaccounts/lib/default.py",
+		"/C/Program Files/Kodi18/portable_data/addons/plugin.video.le/addon.xml",
+		"/C/Program Files/Kodi18/portable_data/userdata/addon_data/plugin.video.themoviedb.helper/settings.xml",
+		"/C/Program Files/Kodi18/portable_data/userdata/addon_data/plugin.video.themoviedb.helper/database/TMDb.db",
+		"/C/Program Files/Kodi18/portable_data/userdata/addon_data/plugin.video.themoviedb.helper/database/TraktAPI.db",
+		"/C/Program Files/Kodi18/portable_data/userdata/addon_data/plugin.video.themoviedb.helper/database/FanartTV.db",
+		"/C/Program Files/Kodi18/portable_data/userdata/addon_data/plugin.video.poisonivy/settings.xml",
+		"/C/Program Files/Kodi18/portable_data/userdata/addon_data/plugin.video.poison/cache.db",
+		"/C/Program Files/Kodi18/portable_data/userdata/addon_data/plugin.video.poison/settings.xml",
+		"/C/Program Files/Kodi18/portable_data/userdata/addon_data/plugin.video.le/search.db",
+		"/C/Program Files/Kodi18/portable_data/userdata/addon_data/plugin.video.le/views.db",
+		"/C/Program Files/Kodi18/portable_data/userdata/addon_data/plugin.video.le/metadata.db",
+		"/C/Program Files/Kodi18/portable_data/userdata/addon_data/plugin.video.le/settings.xml",
+		"/C/Program Files/Kodi18/portable_data/userdata/addon_data/plugin.video.asgard/settings.xml",
+		"/C/Program Files/Kodi18/portable_data/userdata/addon_data/plugin.video.asgard/database.db",
+		"/C/Program Files/Kodi18/portable_data/userdata/addon_data/plugin.video.asgard/cache_f/sources.db",
+		"/C/Program Files/Kodi18/portable_data/addons/plugin.video.asgard/resources/settings.xml",
+		"/C/Program Files/Kodi18/portable_data/addons/plugin.video.asgard/addon.xml",
+		"/C/Program Files/Kodi18/portable_data/addons/plugin.video.asgard/resources/asgard.py",
+		"/C/Users/trade/AppData/Local/Temp/Temp1_xmls.zip/xmls/trakt.xml",
+		"/C/Users/trade/AppData/Local/Temp/Temp1_xmls.zip/xmls/lnlmain.xml",
+		"/C/Users/trade/AppData/Local/Temp/Temp1_xmls.zip/xmls/movie-years.xml",
+		"/C/Users/trade/AppData/Local/Temp/Temp1_xmls.zip/xmls/tv.xml",
+		"/C/Users/trade/AppData/Local/Temp/Temp1_xmls.zip/xmls/movies.xml",
+		"/C/Users/trade/AppData/Local/Temp/Temp1_xmls.zip/xmls/fotd.xml",
+		"/C/Users/trade/AppData/Local/Temp/Temp1_xmls.zip/xmls/abandoned.xml",
+		"/C/Program Files/Kodi18/portable_data/addons/plugin.video.poison/addon.xml",
+		"/C/Users/trade/OneDrive/Desktop/plugin.video.poisonivy/resources/lib/menus/poisonivylist.py",
+		"/C/Program Files/Kodi18/portable_data/addons/plugin.video.poisonivy/resources/lib/menus/navigator.py",
+		"/C/Program Files/Kodi18/portable_data/addons/plugin.video.poisonivy/resources/lib/menus/poisonivylist.py",
+		"/C/Program Files/Kodi18/portable_data/addons/plugin.video.poison/resources/lib/indexers/playlists.py",
+		"/C/Program Files/Kodi18/portable_data/addons/plugin.video.poison/resources/lib/indexers/movies.py",
+		"/C/Program Files/Kodi18/portable_data/addons/plugin.video.poison/resources/lib/indexers/navigator.py",
+		"/C/Users/trade/OneDrive/Desktop/MY KODI/plugin.video.poisonivy/addon.xml",
+		"/C/Program Files/Kodi18/portable_data/addons/plugin.video.poisonivy/addon.xml",
+		"/C/Users/trade/Downloads/Telegram Desktop/router.py",
+		"/C/Program Files/Kodi18/portable_data/addons/plugin.video.poisonivy/resources/lib/modules/router.py",
+		"/C/Program Files/Kodi18/portable_data/addons/plugin.video.poisonivy/resources/lib/menus/movies.py",
+		"/C/Users/trade/OneDrive/Desktop/MY KODI/plugin.video.poisonivy/resources/lib/modules/router.py"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "addon.xml",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1451,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1451,
+								1451
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.2
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "addon.sublime-project",
+	"replace":
+	{
+		"height": 51.2
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 222.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
